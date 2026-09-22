@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Descubra seu modelo ideal | Porsche</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="main.js"></script>
+    <script defer src="escolha.js"></script>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="lado-esquerdo">
+            <a href="index.html" class="item-menu">
+                ☰ menu
+            </a>
+
+            <a href="modelos.html" class="item-modelos">
+                <img src="https://companieslogo.com/img/orig/P911.DE-94013588.png?t=1744633652" 
+                alt= "porsche"  
+                width="20" height="25">
+            </a>
+
+        </div>
+
+
+        <div class="logo-porsche-texto">
+            <img class="logotipo logotipo-preta" src="img/logotipo-preto.png" alt="Porsche Explorer">
+            <img class="logotipo logotipo-branca" src="img/logotipo-branco.png" alt="Porsche Explorer">
+        </div>
+
+
+        <button
+            class="botao-logo"
+            onclick="alternarTema()">
+
+            <img
+                src="https://images.pixels.com/images/artworkimages/medium/3/high-res-porsche-emblem-isolated-bw-stefano-senise-transparent.png"
+                alt="Porsche">
+
+        </button>
+
+        <img class="perfil perfil-clara" src="img/perfil.png" alt="Perfil do usuário">
+        <img class="perfil perfil-escura" src="img/perfil-branco.png" alt="Perfil do usuário">
+
+    </header>
+
+
+    <section class="questionario">
+
+        <div class="quiz-intro" id="quiz-intro">
+
+            <h1>Descubra seu modelo ideal</h1>
+
+            <p>
+                Responda 4 perguntas rápidas e a gente te mostra
+                qual Porsche combina mais com o seu jeito de dirigir.
+            </p>
+
+            <button class="botao-quiz" id="botao-iniciar" type="button">
+                Começar
+            </button>
+
+        </div>
+
+
+        <div class="quiz-perguntas" id="quiz-perguntas" hidden>
+
+            <div class="quiz-progresso">
+
+                <span class="quiz-passo" id="quiz-passo"></span>
+
+                <div class="quiz-barra">
+                    <div class="quiz-barra-preenchida" id="quiz-barra-preenchida"></div>
+                </div>
+
+            </div>
+
+            <h2 class="quiz-pergunta-texto" id="quiz-pergunta-texto"></h2>
+
+            <div class="quiz-opcoes" id="quiz-opcoes"></div>
+
+        </div>
+
+
+        <div class="quiz-resultado" id="quiz-resultado" hidden>
+
+            <h2>Esse é o Porsche que mais combina com você</h2>
+
+            <div class="carro carro-resultado" id="carro-resultado">
+
+                <img id="resultado-imagem" src="" alt="">
+
+                <div class="titulo-carro" id="resultado-titulo"></div>
+
+                <div class="descricao-carro">
+                    <p id="resultado-descricao"></p>
+                </div>
+
+            </div>
+
+            <div class="quiz-acoes">
+
+                <a class="botao-quiz" id="resultado-link" href="#">
+                    Ver esse modelo
+                </a>
+
+                <button class="botao-quiz botao-secundario" id="botao-refazer" type="button">
+                    Refazer questionário
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

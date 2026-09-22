@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <script src="main.js"></script>
+    <script defer src="main.js"></script>
 </head>
 
 <body>
@@ -30,7 +30,8 @@
 
 
         <div class="logo-porsche-texto">
-            <p>Porsche</p>
+            <img class="logotipo logotipo-preta" src="img/logotipo-preto.png" alt="Porsche Explorer">
+            <img class="logotipo logotipo-branca" src="img/logotipo-branco.png" alt="Porsche Explorer">
         </div>
 
 
@@ -44,21 +45,25 @@
 
         </button>
 
+        <img class="perfil perfil-clara" src="img/perfil.png" alt="Perfil do usuário">
+        <img class="perfil perfil-escura" src="img/perfil-branco.png" alt="Perfil do usuário">
+
     </header>
 
 
 
     <section class="banner">
-        <iframe width="1765" height="465" src="https://www.youtube.com/embed/8FpXGOd_8u4?si=hKe2rzN1BYK3IAqM" title="Showcase Porsche" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen;>
-
-        </iframe>
+        <video class="video-banner" autoplay muted loop playsinline>
+            <source src="video/porsche-banner.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo em HTML5.
+        </video>
     </section>
 
 
     <section class="mais-desejados">
 
         <p class="texto-desejados">
-            Abaixo tem a aba dos modelos mais desejados da Porsche no momento
+            Conheça os modelos mais desejados da Porsche, com design inovador e desempenho incomparável. Explore a excelência em engenharia automotiva e descubra o carro dos seus sonhos.
         </p>
 
 
@@ -116,177 +121,173 @@
         <div class="grade-carros">
 
 
-                <a href="taycan.html">
-            <div class="carro">
+            <a href="taycan.html">
+                <div class="carro">
 
-                <img
-                    src="https://a.storyblok.com/f/322327/1700x1300/a94bdd6a4c/ta24q3eix0002-taycan-turbo-s-front.jpg/m/990x673/smart/filters:format(webp)"
-                    alt="Porsche Taycan">
+                    <img
+                        src="https://a.storyblok.com/f/322327/1700x1300/a94bdd6a4c/ta24q3eix0002-taycan-turbo-s-front.jpg/m/990x673/smart/filters:format(webp)"
+                        alt="Porsche Taycan">
 
-                <div class="titulo-carro">
-                    T<span>AY</span>C<span>AN</span>
+                    <div class="titulo-carro">
+                        T<span>AY</span>C<span>AN</span>
+                    </div>
+
+                    <div class="descricao-carro">
+
+                        <span>Gasolina</span>
+
+                        <p>
+                            Carro elétrico e desportivo com capacidade
+                            para 4 a 5 pessoas
+                        </p>
+                    </div>
                 </div>
+            </a>
 
-                <div class="descricao-carro">
 
-                    <span>Gasolina</span>
+            <a href="panamera.html">
+                <div class="carro">
 
-                    <p>
-                        Carro elétrico e desportivo com capacidade
-                        para 4 a 5 pessoas
-                    </p>
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReIVR9vu2rFfYovtaFVJk6WMoI13KRTiDMwQbJUf-2Ei7UT4Au9WS_3StV&s=10"
+                        alt="Porsche Panamera">
+
+                    <div class="titulo-carro branco3">
+                        P<span>ANA</span>M<span>ERA</span>
+                    </div>
+
+                    <div class="descricao-carro">
+
+                        <span>Híbrido</span>
+                        <p>
+                            Sedan de luxo de muito conforto com capacidade
+                            para 4 a 5 pessoas
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
 
 
-        <a href="panamera.html">
-            <div class="carro">
+            <a href="macan.html">
+                <div class="carro">
 
-                <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReIVR9vu2rFfYovtaFVJk6WMoI13KRTiDMwQbJUf-2Ei7UT4Au9WS_3StV&s=10"
-                    alt="Porsche Panamera">
+                    <img
+                        src="https://res.cloudinary.com/unix-center/image/upload/c_limit,dpr_3.0,f_auto,fl_progressive,g_center,h_240,q_auto:good,w_385/lgmrqoqbrtrxovayjjqa.jpg"
+                        alt="Porsche Macan"
+                        width="280" height="280">
 
-                <div class="titulo-carro branco3">
-                    P<span>ANA</span>M<span>ERA</span>
-                </div>
+                    <div class="titulo-carro">
+                        M<span>AC</span>A<span>N</span>
+                    </div>
 
-                <div class="descricao-carro">
+                    <div class="descricao-carro">
 
-                    <span>Híbrido</span>
-                    <p>
-                        Sedan de luxo de muito conforto com capacidade
-                        para 4 a 5 pessoas
-                    </p>
-                </div>
-            </div>
-        </a>
+                        <span>Gasolina</span>
+                        <span>elétrico</span>
 
+                        <p>
+                            SUV compacto desportivo com capacidade
+                            para 5 pessoas
+                        </p>
 
-        <a href="macan.html">
-            <div class="carro">
-
-                <img
-                    src="https://res.cloudinary.com/unix-center/image/upload/c_limit,dpr_3.0,f_auto,fl_progressive,g_center,h_240,q_auto:good,w_385/lgmrqoqbrtrxovayjjqa.jpg"
-                    alt="Porsche Macan"
-                    width="280" height="280">
-
-                <div class="titulo-carro">
-                    M<span>AC</span>A<span>N</span>
-                </div>
-
-                <div class="descricao-carro">
-
-                    <span>Gasolina</span>
-                    <span>elétrico</span>
-
-                    <p>
-                        SUV compacto desportivo com capacidade
-                        para 5 pessoas
-                    </p>
-
-                </div>
-
-            </div>
-        </a>
-
-
-        <a href="918.html">
-            <div class="carro">
-
-                <img
-                    src="https://s2-autoesporte.glbimg.com/7R9wOj5e1m-7h5U9IedH1afxvyk=/0x0:620x400/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_cf9d035bf26b4646b105bd958f32089d/internal_photos/bs/2020/C/T/HsZ3M3QqCoxV6ehWm6hA/2015-08-14-porsche-918-spyder-19.jpg"
-                    alt="Porsche 918 Spyder">
-
-                <div class="titulo-carro branco2">
-                    918·SPYDER
-                </div>
-
-                <div class="descricao-carro">
-
-                    <span>elétrico</span>
-                    <span>híbrido</span>
-
-                    <p>
-                        Um modelo focado em velocidade e potência
-                        com capacidade para duas pessoas
-                    </p>
+                    </div>
 
                 </div>
-
-            </div>
-        </a>
+            </a>
 
 
+            <a href="918.html">
+                <div class="carro">
 
-        <a href="cayenne.html">
-            <div class="carro">
+                    <img
+                        src="https://s2-autoesporte.glbimg.com/7R9wOj5e1m-7h5U9IedH1afxvyk=/0x0:620x400/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_cf9d035bf26b4646b105bd958f32089d/internal_photos/bs/2020/C/T/HsZ3M3QqCoxV6ehWm6hA/2015-08-14-porsche-918-spyder-19.jpg"
+                        alt="Porsche 918 Spyder">
 
-                <img
-                    src="https://prs.porsche.com/iod/image/BR/9YBCT1/1/N4Igxg9gdgZglgcxALlAQynAtmgLnaAZxQG0BdAGnDSwFMAnNFUOAExRFoA9cBaAGwgB3XjHrQ+-WjFwgqEAA74izEADc09OBlnIQrWoQDWuRSAC+5qrShq44qHSi6W7PQFV6AIwwBZNGAYciCKylDEqJZU-IgAFvhQSKggbBwAIgCCAJrBoQThzFEgCuKsAK5gLiluIACcWQBCAMIAKgCMuUr5EaCQsIikIAAMAIrBbWkA7OMA4gBs4wAK01RtLQBMwQAsAGKbVACsABpNwXMAkgDMZwDStWcAcg-Bkxk3L0cHL1kdVAAclwawT+LT+wVqGQAouDzr5gjsWtcqDM2jNgucAOpIkAAKUh+xAABkZi00gAlQnBEZtHFUsn3KjuS4EgBqTVZ0Mo4AgZWc9AAnhwGmTglgIAZ+FlaJoUOshutJpYrCBCLRcAkED0QDAIPQcLoQAArBS0JBUXCMcIKTQ2XQwND8VWWIA?clientId=icc"
-                    alt="Porsche Cayenne">
+                    <div class="titulo-carro branco2">
+                        918·SPYDER
+                    </div>
 
-                <div class="titulo-carro">
-                    C<span>AY</span>E<span>NNE</span>
-                </div>
+                    <div class="descricao-carro">
 
-                <div class="descricao-carro">
+                        <span>elétrico</span>
+                        <span>híbrido</span>
 
-                    <span>Gasolina</span>
-                    <span>elétrico</span>
-                    <span>híbrido</span>
+                        <p>
+                            Um modelo focado em velocidade e potência
+                            com capacidade para duas pessoas
+                        </p>
 
-                    <p>
-                        SUV versátil de até 5 lugares
-                    </p>
-
-                </div>
-
-            </div>
-        </a>
-
-
-
-        <a href="959.html">
-            <div class="carro">
-
-                <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaQJG17JvyVrVrvw3Mq1d3Nfs1aGIDPqdy4xxKtfygs7QFmz-L4kMcEubp&s=10"
-                    alt="Porsche 959">
-
-                <div class="titulo-carro branco">
-                    959
-                </div>
-
-                <div class="descricao-carro">
-
-                    <span>Gasolina</span>
-
-                    <p>
-                        É um dos supercarros mais revolucionários
-                        da história
-                    </p>
+                    </div>
 
                 </div>
+            </a>
 
-            </div>
+
+
+            <a href="cayenne.html">
+                <div class="carro">
+
+                    <img
+                        src="https://prs.porsche.com/iod/image/BR/9YBCT1/1/N4Igxg9gdgZglgcxALlAQynAtmgLnaAZxQG0BdAGnDSwFMAnNFUOAExRFoA9cBaAGwgB3XjHrQ+-WjFwgqEAA74izEADc09OBlnIQrWoQDWuRSAC+5qrShq44qHSi6W7PQFV6AIwwBZNGAYciCKylDEqJZU-IgAFvhQSKggbBwAIgCCAJrBoQThzFEgCuKsAK5gLiluIACcWQBCAMIAKgCMuUr5EaCQsIikIAAMAIrBbWkA7OMA4gBs4wAK01RtLQBMwQAsAGKbVACsABpNwXMAkgDMZwDStWcAcg-Bkxk3L0cHL1kdVAAclwawT+LT+wVqGQAouDzr5gjsWtcqDM2jNgucAOpIkAAKUh+xAABkZi00gAlQnBEZtHFUsn3KjuS4EgBqTVZ0Mo4AgZWc9AAnhwGmTglgIAZ+FlaJoUOshutJpYrCBCLRcAkED0QDAIPQcLoQAArBS0JBUXCMcIKTQ2XQwND8VWWIA?clientId=icc"
+                        alt="Porsche Cayenne">
+
+                    <div class="titulo-carro">
+                        C<span>AY</span>E<span>NNE</span>
+                    </div>
+
+                    <div class="descricao-carro">
+
+                        <span>Gasolina</span>
+                        <span>elétrico</span>
+                        <span>híbrido</span>
+
+                        <p>
+                            SUV versátil de até 5 lugares
+                        </p>
+
+                    </div>
+
+                </div>
+            </a>
+
+
+
+            <a href="959.html">
+                <div class="carro">
+
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaQJG17JvyVrVrvw3Mq1d3Nfs1aGIDPqdy4xxKtfygs7QFmz-L4kMcEubp&s=10"
+                        alt="Porsche 959">
+
+                    <div class="titulo-carro branco">
+                        959
+                    </div>
+
+                    <div class="descricao-carro">
+
+                        <span>Gasolina</span>
+
+                        <p>
+                            É um dos supercarros mais revolucionários
+                            da história
+                        </p>
+
+                    </div>
+
+                </div>
+            </a>
 
         </div>
-    </a>        
-
 
     </section>
 
 
-    <script>
+    <a href="escolha.html" class="link-questionario">
+        Ainda não sabe qual Porsche combina com você?
+        <span>Faça o nosso questionário rápido e descubra seu modelo ideal</span>
+    </a>
 
-        function mudarTema() {
 
-            document.body.classList.toggle("escuro");
-
-        }
-
-    </script>
 </body>
 
 </html>

@@ -1,13 +1,364 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porsche 959</title>
-    <link rel="stylesheet" href="959.css">
-    <script src="959.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carros.css">
+    <link rel="stylesheet" href="footer.css">
+
+    <script defer src="main.js"></script>
+    <script defer src="carros.js"></script>
 </head>
 <body>
-    
+
+    <header class="cabecalho">
+        <div class="lado-esquerdo">
+            <a href="index.html" class="item-menu">
+                ☰ menu
+            </a>
+
+            <a href="modelos.html" class="item-modelos">
+                <img src="https://companieslogo.com/img/orig/P911.DE-94013588.png?t=1744633652" 
+                alt="porsche"  
+                width="20" height="25">
+            </a>
+
+        </div>
+
+
+        <div class="logo-porsche-texto">
+            <img class="logotipo logotipo-preta" src="img/logotipo-preto.png" alt="Porsche Explorer">
+            <img class="logotipo logotipo-branca" src="img/logotipo-branco.png" alt="Porsche Explorer">
+        </div>
+
+
+        <button
+            class="botao-logo"
+            onclick="alternarTema()">
+
+            <img
+                src="https://images.pixels.com/images/artworkimages/medium/3/high-res-porsche-emblem-isolated-bw-stefano-senise-transparent.png"
+                alt="Porsche">
+
+        </button>
+
+        <img class="perfil perfil-clara" src="img/perfil.png" alt="Perfil do usuário">
+        <img class="perfil perfil-escura" src="img/perfil-branco.png" alt="Perfil do usuário">
+
+    </header>
+
+
+    <main class="pagina">
+        <section class="hero">
+
+            <video class="video-modelo" autoplay muted loop playsinline>
+                <source src="video/911-banner.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo em HTML5.
+            </video>
+
+            <div class="lateral-container">
+                <img 
+                src="carros/959-lateral.png"
+                alt="Porsche 911 lateral"
+                class="carro-lateral"
+                 style="transform: translate(08px, 120px);">
+            </div>
+        </section>
+
+
+        <section class="modelo">
+            
+            <h1> 959 </h1>
+            <img 
+                src="carros/959-frontal.png"
+                alt="Porsche 911 frontal"
+                class="carro-frontal">
+
+
+            <div class="especificacao aceleracao">
+                <strong data-valor-final="3.7" data-decimais="1">
+                    <span class="valor-animado">0</span><span>s</span>
+                </strong>
+                <p>
+                    Aceleração<br>
+                    de 0 a 100km/h
+                </p>
+            </div>
+
+
+            <div class="especificacao desempenho">
+                <strong data-valor-final="317" data-decimais="0">
+                    <span class="valor-animado">0</span><span>Km/H</span>
+                </strong>
+                <p> velocidade máxima </p>
+                <strong class="potencia" data-valor-final="450" data-decimais="0">
+                    <span class="valor-animado">0</span><span>CV</span>
+                </strong>
+            </div>
+        </section>
+
+
+        <section class="informacoes">
+            <button class="ativo">1993</button>
+            <button>Gasolina</button>
+            <button>Tração integral</button>
+            <button>manual</button>
+        </section>
+
+        <section class="rodas">
+
+            <article class="roda">
+                <img 
+                    src="https://leandrinistore.vteximg.com.br/arquivos/ids/175132-900-900/Roda_Porsche_911_Turbo_S_1_2.jpg?v=636674392124070000"
+                    alt="Roda preta"
+                >
+
+                <div>
+                    <h2>
+                        Roda
+                    </h2>
+
+                    <p>
+                        Conjunto de rodas de liga<br>
+                        leve com design derivado<br>
+                        do motorsport
+                    </p>
+                </div>
+            </article>
+
+
+            <article class="roda">
+                <img 
+                    src="https://images.tcdn.com.br/img/img_prod/813520/jogo_de_rodas_originiais_porsche_911_carrera_2021_aro_20x8_5_e_11_5_prata_5x130_et_53_e_67_usadas_881_1_cae2fce09bc241172a7095614a52e868.jpg"
+                    alt="Roda prata"
+                >
+                <div>
+                    <h2>
+                        Roda
+                    </h2>
+
+                    <p>
+                        Conjunto de rodas de liga<br>
+                        leve com design de cinco<br>
+                        raios de braço duplo
+                    </p>
+                </div>
+            </article>
+        </section>
+
+
+        <section class="curiosidades">
+
+            <h2>Curiosidades sobre o 911</h2>
+
+            <p class="curiosidades-dica">Toque nos cartões para descobrir</p>
+
+            <div class="grade-curiosidades">
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">01</span>
+                        <p>No que ele inovou?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                            O 959 foi o primeiro Porsche produzido em série 
+                            a utilizar tração integral, tecnologia que 
+                            posteriormente influenciou a evolução do 911 Carrera 4.
+                        </p>
+                    </div>
+                </button>
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">02</span>
+                        <p>Como afetou a industria?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                            O 959 possuía suspensão ajustável e autonivelante,
+                             ABS, controle eletrônico da tração integral e 
+                             monitoramento da pressão dos pneus.
+                        </p>
+                    </div>
+                </button>
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">03</span>
+                        <p>limitado ou comum?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                            O 959 foi fabricado em uma série extremamente limitada. 
+                            Ao todo, 292 exemplares de rua foram construídos entre 
+                            1987 e 1988.
+                        </p>
+                    </div>
+                </button>
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">04</span>
+                        <p>Por que era tão relacionado a corridas?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                            O motor boxer 2.85 biturbo do 959 era relacionado aos 
+                            motores de competição dos Porsche 956 e 962, dois dos 
+                            protótipos mais importantes da marca
+                        </p>
+                    </div>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="evolucao">
+
+            <h2>Evolução do 959</h2>
+
+            <div class="evolucao-anos">
+                <button class="ativo" data-ano="1964">1987</button>
+                <button data-ano="1997">1988</button>
+                <button data-ano="2026">1987-1988</button>
+            </div>
+
+            <div class="evolucao-conteudo">
+
+                <div class="evolucao-carro" data-ano="1964">
+
+                    <img src="carros/Porsche komfort.webp" alt="Porsche 911 de 1964">
+
+                    <div class="apontamento esquerda" style="top: 22%; left: 6%;">
+                        <span class="ponto"></span>
+                        <p>Foi a configuração voltada para utilização nas ruas</p>
+                    </div>
+
+                    <div class="apontamento direita" style="top: 55%; right: 6%;">
+                        <span class="ponto"></span>
+                        <p>combinando o desempenho do 959 com equipamentos e acabamento mais adequados ao uso cotidiano.</p>
+                    </div>
+
+                </div>
+
+                <div class="evolucao-carro" data-ano="1997" hidden>
+
+                    <img src="carros/Porsceh Sport.webp" alt="Porsche 911 de 1997">
+
+                    <div class="apontamento esquerda" style="top: 22%; left: 6%;">
+                        <span class="ponto"></span>
+                        <p>Uma versão mais focada em desempenho e com redução de peso.</p>
+                    </div>
+
+                    <div class="apontamento direita" style="top: 55%; right: 6%;">
+                        <span class="ponto"></span>
+                        <p>Recebeu turbo compressores maiores e maior pressão de turbo, chegando a 515 cv. Apenas 29 unidades foram vendidas.</p>
+                    </div>
+
+                </div>
+
+                <div class="evolucao-carro" data-ano="2026" hidden>
+
+                    <img src="carros/porsche S.webp" alt="Porsche 911 de 2026">
+
+                    <div class="apontamento esquerda" style="top: 22%; left: 6%;">
+                        <span class="ponto"></span>
+                        <p>Uma configuração ainda mais rara e potente</p>
+                    </div>
+
+                    <div class="apontamento direita" style="top: 55%; right: 6%;">
+                        <span class="ponto"></span>
+                        <p>com 515 cv, 1.350 kg e velocidade máxima de 339 km/h.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="pistas">
+
+            <h2>O 959 nas pistas</h2>
+
+            <div class="grade-pistas">
+
+                <article class="carro-pista">
+
+                    <img src="carros/959 paris dakar.jpg">
+
+                    <span class="pista-numero">01</span>
+                    <h3>Paris Dakar</h3>
+                    <span class="pista-periodo">1986</span>
+
+                    <p>
+                        Foi o grande momento do 959 nas competições. Três carros terminaram a prova, 
+                        conquistando primeiro, segundo e sexto lugares.
+
+                </article>
+
+                <article class="carro-pista">
+
+                    <img src="carros/959 le mans.jpg">
+
+                    <span class="pista-numero">02</span>
+                    <h3>959 le mans</h3>
+                    <span class="pista-periodo">1986</span>
+
+                    <p>
+                       No mesmo ano, o carro terminou as 24 Horas de Le Mans em 7º lugar geral e venceu sua classe IMSA/GTX.
+                    </p>
+
+                </article>
+
+    </main>
+
+
+    <footer class="rodape-site">
+
+        <div class="rodape-conteudo">
+
+            <div class="rodape-marca">
+                <img src="img/logotipo-branco.png" alt="Porsche Explorer">
+                <p>
+                    Um site de fã para conhecer os modelos da Porsche:
+                    números, história e curiosidades.
+                </p>
+            </div>
+
+            <nav class="rodape-coluna" aria-label="Navegação do rodapé">
+                <h2>Navegar</h2>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="modelos.html">Todos os modelos</a></li>
+                    <li><a href="911.html">Porsche 911</a></li>
+                </ul>
+            </nav>
+
+            <div class="rodape-coluna">
+                <h2>Aviso</h2>
+                <p>
+                    Projeto de fã, sem vínculo com a Porsche AG.
+                    Porsche e o brasão são marcas registradas de
+                    seus respectivos donos.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="rodape-base">
+            <p>© 2026 Porsche Explorer</p>
+            <a href="#">Voltar ao topo</a>
+        </div>
+
+    </footer>
+
 </body>
 </html>

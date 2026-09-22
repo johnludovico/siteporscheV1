@@ -1,50 +1,99 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porsche Cayman</title>
-    <link rel="stylesheet" href="cayman.css">
-    <script src="cayman.js"></script>
-</head>
+    <title>Porsche Boxster</title>
 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carros.css">
+
+    <script defer src="main.js"></script>
+    <script defer src="carros.js"></script>
+</head>
 <body>
+
+    <header class="cabecalho">
+        <div class="lado-esquerdo">
+            <a href="index.html" class="item-menu">
+                ☰ menu
+            </a>
+
+            <a href="modelos.html" class="item-modelos">
+                <img src="https://companieslogo.com/img/orig/P911.DE-94013588.png?t=1744633652" 
+                alt="porsche"  
+                width="20" height="25">
+            </a>
+
+        </div>
+
+
+        <div class="logo-porsche-texto">
+            <img class="logotipo logotipo-preta" src="img/logotipo-preto.png" alt="Porsche Explorer">
+            <img class="logotipo logotipo-branca" src="img/logotipo-branco.png" alt="Porsche Explorer">
+        </div>
+
+
+        <button
+            class="botao-logo"
+            onclick="alternarTema()">
+
+            <img
+                src="https://images.pixels.com/images/artworkimages/medium/3/high-res-porsche-emblem-isolated-bw-stefano-senise-transparent.png"
+                alt="Porsche">
+
+        </button>
+
+        <img class="perfil perfil-clara" src="img/perfil.png" alt="Perfil do usuário">
+        <img class="perfil perfil-escura" src="img/perfil-branco.png" alt="Perfil do usuário">
+
+    </header>
+
 
     <main class="pagina">
         <section class="hero">
-            <img 
-                src="https://a.storyblok.com/f/322327/2616x712/5a02fea4bc/cm24n3bix0001-718-cayman-side.png/m/1800x490/smart/filters:format(avif)"
-                alt="Porsche Cayman lateral"
+
+            <video class="video-modelo" autoplay muted loop playsinline>
+                <source src="video/911-banner.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo em HTML5.
+            </video>
+
+            <div class="lateral-container">
+                <img 
+                src="https://a.storyblok.com/f/322327/2616x712/bb2da0d0ae/718-boxster-side.png/m/1800x490/smart/filters:format(avif)"
+                alt="Boxster lateral"
                 class="carro-lateral">
+            </div>
         </section>
 
 
         <section class="modelo">
-            <h1>Cayman</h1>
+            
+            <h1> Boxster </h1>
             <img 
-                src="https://res.cloudinary.com/doykh3kbc/image/upload/v1746148567/porsche-cayman-718-gt4-rs_n4yrxn.webp"
-                alt="Porsche Cayman frontal"
+                src="https://cdn.jdpower.com/ChromeImageGallery/Expanded/Transparent/640/2016PRC020003_640/2016PRC020003_640_05.png"
+                alt="Boxster frontal"
                 class="carro-frontal">
 
 
             <div class="especificacao aceleracao">
-                <strong>
-                    4,9<span>s</span>
+                <strong data-valor-final="4.9" data-decimais="1">
+                    <span class="valor-animado">0</span><span>s</span>
                 </strong>
                 <p>
                     Aceleração<br>
-                    de 0 a 100
+                    de 0 a 100km/h
                 </p>
             </div>
 
 
             <div class="especificacao desempenho">
-                <strong>
-                    275<span>Km/H</span>
+                <strong data-valor-final="275" data-decimais="0">
+                    <span class="valor-animado">0</span><span>Km/H</span>
                 </strong>
                 <p> velocidade máxima </p>
-                <strong class="potencia">
-                    300<span>CV</span>
+                <strong class="potencia" data-valor-final="300" data-decimais="0">
+                    <span class="valor-animado">0</span><span>CV</span>
                 </strong>
             </div>
         </section>
@@ -52,22 +101,22 @@
 
         <section class="informacoes">
             <button class="ativo">2024</button>
-            <button>gasolina</button>
-            <button>tração traseira</button>
-            <button>automatico</button>
+            <button>Gasolina</button>
+            <button>Tração Traseira</button>
+            <button>Automático</button>
         </section>
 
         <section class="rodas">
 
             <article class="roda">
                 <img 
-                    src="https://leandrinistore.vteximg.com.br/arquivos/ids/412550-900-900/Jogo-Roda-GT7-Porsche-Boxster-Cayman-718-Aro-20-Preta-Diamantada.png?v=638182220139700000"
+                    src="https://leandrinistore.vteximg.com.br/arquivos/ids/175132-900-900/Roda_Porsche_911_Turbo_S_1_2.jpg?v=636674392124070000"
                     alt="Roda preta"
                 >
 
                 <div>
                     <h2>
-                        Ro<span>DA</span>
+                        Roda
                     </h2>
 
                     <p>
@@ -81,12 +130,12 @@
 
             <article class="roda">
                 <img 
-                    src="https://images.tcdn.com.br/img/img_prod/813520/jogo_de_rodas_originais_porsche_718_cayman_aro_20x8_e_10_prata_diamantada_5x130_et_57_e_45_seminovas_1419_1_73e79e66b133bf7617401acaa130c78e.jpg"
+                    src="https://images.tcdn.com.br/img/img_prod/813520/jogo_de_rodas_originiais_porsche_911_carrera_2021_aro_20x8_5_e_11_5_prata_5x130_et_53_e_67_usadas_881_1_cae2fce09bc241172a7095614a52e868.jpg"
                     alt="Roda prata"
                 >
                 <div>
                     <h2>
-                        Ro<span>DA</span>
+                        Roda
                     </h2>
 
                     <p>
@@ -97,7 +146,249 @@
                 </div>
             </article>
         </section>
+
+
+        <section class="curiosidades">
+
+            <h2>Curiosidades sobre o Boxster</h2>
+
+            <p class="curiosidades-dica">Toque nos cartões para descobrir</p>
+
+            <div class="grade-curiosidades">
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">01</span>
+                        <p>Qual é a principal característica mecânica do Cayman?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                            O Cayman é conhecido pelo motor central, uma configuração que ajuda a distribuir o peso do carro de maneira equilibrada e contribui para sua agilidade nas curvas.
+                        </p>
+                    </div>
+                </button>
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">02</span>
+                        <p>E o porta-malas?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                            Por ter o motor posicionado exatamente no meio do carro, o 718 Cayman se beneficia de um excelente espaço de carga para um esportivo. 
+                            Ele possui dois porta-malas: um na frente (onde tradicionalmente ficaria o motor) e um na traseira, acima e atrás do motor.
+                        </p>
+                    </div>
+                </button>
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">03</span>
+                        <p>Por que o Cayman passou a se chamar 718 Cayman?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                            Em 2016, a Porsche adotou o nome 718 para Cayman e Boxster, homenageando o histórico Porsche 718 de competição, que conquistou diversas vitórias nas pistas.
+                        </p>
+                    </div>
+                </button>
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">04</span>
+                        <p>Por que o Porsche Cayman tem esse nome?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                            O nome vem do caiman, um crocodiliano encontrado na América Central e do Sul. A Porsche escolheu o nome para transmitir a ideia de agilidade e força do animal.
+                        </p>
+                    </div>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="evolucao">
+
+            <h2>Evolução do Boxster</h2>
+
+            <div class="evolucao-anos">
+                <button class="ativo" data-ano="1964">1964</button>
+                <button data-ano="1997">1997</button>
+                <button data-ano="2026">2026</button>
+            </div>
+
+            <div class="evolucao-conteudo">
+
+                <div class="evolucao-carro" data-ano="1964">
+
+                    <img src="carros/1964-branco.jpg" alt="Porsche 911 de 1964">
+
+                    <div class="apontamento esquerda" style="top: 22%; left: 6%;">
+                        <span class="ponto"></span>
+                        <p>Motor boxer refrigerado a ar, a marca registrada dos primeiros 911</p>
+                    </div>
+
+                    <div class="apontamento direita" style="top: 55%; right: 6%;">
+                        <span class="ponto"></span>
+                        <p>Faróis redondos e carroceria compacta, o desenho que define o modelo até hoje</p>
+                    </div>
+
+                </div>
+
+                <div class="evolucao-carro" data-ano="1997" hidden>
+
+                    <img src="carros/1997-branco.jpg" alt="Porsche 911 de 1997">
+
+                    <div class="apontamento esquerda" style="top: 22%; left: 6%;">
+                        <span class="ponto"></span>
+                        <p>Primeira geração do 911 com motor refrigerado a água</p>
+                    </div>
+
+                    <div class="apontamento direita" style="top: 55%; right: 6%;">
+                        <span class="ponto"></span>
+                        <p>Faróis ovais, um visual bem diferente dos clássicos redondos</p>
+                    </div>
+
+                </div>
+
+                <div class="evolucao-carro" data-ano="2026" hidden>
+
+                    <img src="carros/2026-branco.jpg" alt="Porsche 911 de 2026">
+
+                    <div class="apontamento esquerda" style="top: 22%; left: 6%;">
+                        <span class="ponto"></span>
+                        <p>Painel totalmente digital e assistentes eletrônicos de condução</p>
+                    </div>
+
+                    <div class="apontamento direita" style="top: 55%; right: 6%;">
+                        <span class="ponto"></span>
+                        <p>Aerodinâmica ativa, com elementos que se ajustam sozinhos conforme a velocidade</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="pistas">
+
+            <h2>O 911 nas pistas</h2>
+
+            <div class="grade-pistas">
+
+                <article class="carro-pista">
+
+                    <img src="https://content-hub.imgix.net/7grPNAytvCbr54emyWRHpI/4b7e1dc5f4a397868327e435c329a44c/the-20le-20mans-20winning-20porsche-20rsr-201.jpeg?w=1308" alt="Porsche 911 Carrera RSR">
+
+                    <span class="pista-numero">01</span>
+                    <h3>911 Carrera RSR</h3>
+                    <span class="pista-periodo">1973 — 1977</span>
+
+                    <p>
+                        Um dos primeiros 911 preparados exclusivamente
+                        para corrida, venceu provas de endurance e
+                        ajudou a construir a fama esportiva da marca.
+                    </p>
+
+                </article>
+
+                <article class="carro-pista">
+
+                    <img src="https://www.razaoautomovel.com/wp-content/uploads/2023/11/Porsche-911-GT1-Strassenversion-1.jpg.webp" alt="Porsche 911 GT1">
+
+                    <span class="pista-numero">02</span>
+                    <h3>911 GT1</h3>
+                    <span class="pista-periodo">1996 — 1998</span>
+
+                    <p>
+                        Criado para as 24 Horas de Le Mans, levou o 911
+                        ao topo do automobilismo mundial com a vitória
+                        geral da prova em 1998.
+                    </p>
+
+                </article>
+
+                <article class="carro-pista">
+
+                    <img src="https://hips.hearstapps.com/mtg-prod/65f7df13d444480008fe2b91/046-2023-porsche-911-gt3-cup-gt3-r.jpg" alt="Porsche 911 GT3 R">
+
+                    <span class="pista-numero">03</span>
+                    <h3>911 GT3 R</h3>
+                    <span class="pista-periodo">2010 — atual</span>
+
+                    <p>
+                        Referência no automobilismo de GT moderno,
+                        disputa provas de endurance ao redor do mundo
+                        até hoje.
+                    </p>
+
+                </article>
+
+                <article class="carro-pista">
+
+                    <img src="https://www.carreracup.com.au/wp-content/uploads/2022/05/Porsche-992-GT3-Cup-22-MH_10240-scaled.jpg" alt="Porsche 911 GT3 Cup">
+
+                    <span class="pista-numero">04</span>
+                    <h3>911 GT3 Cup</h3>
+                    <span class="pista-periodo">1998 — atual</span>
+
+                    <p>
+                        Base da Porsche Carrera Cup, é o carro que forma
+                        pilotos em categorias monomarca pelo mundo todo.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
     </main>
+
+
+    <footer class="rodape-site">
+
+        <div class="rodape-conteudo">
+
+            <div class="rodape-marca">
+                <img src="img/logotipo-branco.png" alt="Porsche Explorer">
+                <p>
+                    Um site de fã para conhecer os modelos da Porsche:
+                    números, história e curiosidades.
+                </p>
+            </div>
+
+            <nav class="rodape-coluna" aria-label="Navegação do rodapé">
+                <h2>Navegar</h2>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="modelos.html">Todos os modelos</a></li>
+                    <li><a href="911.html">Porsche 911</a></li>
+                </ul>
+            </nav>
+
+            <div class="rodape-coluna">
+                <h2>Aviso</h2>
+                <p>
+                    Projeto de fã, sem vínculo com a Porsche AG.
+                    Porsche e o brasão são marcas registradas de
+                    seus respectivos donos.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="rodape-base">
+            <p>© 2026 Porsche Explorer</p>
+            <a href="#">Voltar ao topo</a>
+        </div>
+
+    </footer>
 
 </body>
 </html>

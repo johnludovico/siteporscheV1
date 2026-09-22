@@ -1,49 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porsche Boxster</title>
-    <link rel="stylesheet" href="boxster.css">
-    <script src="boxster.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carros.css">
+
+    <script defer src="main.js"></script>
+    <script defer src="carros.js"></script>
 </head>
 <body>
 
+    <header class="cabecalho">
+        <div class="lado-esquerdo">
+            <a href="index.html" class="item-menu">
+                ☰ menu
+            </a>
+
+            <a href="modelos.html" class="item-modelos">
+                <img src="https://companieslogo.com/img/orig/P911.DE-94013588.png?t=1744633652" 
+                alt="porsche"  
+                width="20" height="25">
+            </a>
+
+        </div>
+
+
+        <div class="logo-porsche-texto">
+            <img class="logotipo logotipo-preta" src="img/logotipo-preto.png" alt="Porsche Explorer">
+            <img class="logotipo logotipo-branca" src="img/logotipo-branco.png" alt="Porsche Explorer">
+        </div>
+
+
+        <button
+            class="botao-logo"
+            onclick="alternarTema()">
+
+            <img
+                src="https://images.pixels.com/images/artworkimages/medium/3/high-res-porsche-emblem-isolated-bw-stefano-senise-transparent.png"
+                alt="Porsche">
+
+        </button>
+
+        <img class="perfil perfil-clara" src="img/perfil.png" alt="Perfil do usuário">
+        <img class="perfil perfil-escura" src="img/perfil-branco.png" alt="Perfil do usuário">
+
+    </header>
+
+
     <main class="pagina">
         <section class="hero">
-            <img 
+
+            <video class="video-modelo" autoplay muted loop playsinline>
+                <source src="video/911-banner.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo em HTML5.
+            </video>
+
+            <div class="lateral-container">
+                <img 
                 src="https://a.storyblok.com/f/322327/2616x712/bb2da0d0ae/718-boxster-side.png/m/1800x490/smart/filters:format(avif)"
-                alt="Porsche Cayman lateral"
+                alt="Boxster lateral"
                 class="carro-lateral">
+            </div>
         </section>
 
 
         <section class="modelo">
-            <h1>Boxster</h1>
+            
+            <h1> Boxster </h1>
             <img 
                 src="https://cdn.jdpower.com/ChromeImageGallery/Expanded/Transparent/640/2016PRC020003_640/2016PRC020003_640_05.png"
-                alt="Porsche Cayman frontal"
+                alt="Boxster frontal"
                 class="carro-frontal">
 
 
             <div class="especificacao aceleracao">
-                <strong>
-                    4,9<span>s</span>
+                <strong data-valor-final="4.9" data-decimais="1">
+                    <span class="valor-animado">0</span><span>s</span>
                 </strong>
                 <p>
                     Aceleração<br>
-                    de 0 a 100
+                    de 0 a 100km/h
                 </p>
             </div>
 
 
             <div class="especificacao desempenho">
-                <strong>
-                    275<span>Km/H</span>
+                <strong data-valor-final="275" data-decimais="0">
+                    <span class="valor-animado">0</span><span>Km/H</span>
                 </strong>
                 <p> velocidade máxima </p>
-                <strong class="potencia">
-                    300<span>CV</span>
+                <strong class="potencia" data-valor-final="300" data-decimais="0">
+                    <span class="valor-animado">0</span><span>CV</span>
                 </strong>
             </div>
         </section>
@@ -51,22 +101,22 @@
 
         <section class="informacoes">
             <button class="ativo">2024</button>
-            <button>gasolina</button>
-            <button>tração traseira</button>
-            <button>automatico</button>
+            <button>Gasolina</button>
+            <button>Tração Traseira</button>
+            <button>Automático</button>
         </section>
 
         <section class="rodas">
 
             <article class="roda">
                 <img 
-                    src="https://leandrinistore.vteximg.com.br/arquivos/ids/412550-900-900/Jogo-Roda-GT7-Porsche-Boxster-Cayman-718-Aro-20-Preta-Diamantada.png?v=638182220139700000"
+                    src="https://leandrinistore.vteximg.com.br/arquivos/ids/175132-900-900/Roda_Porsche_911_Turbo_S_1_2.jpg?v=636674392124070000"
                     alt="Roda preta"
                 >
 
                 <div>
                     <h2>
-                        Ro<span>DA</span>
+                        Roda
                     </h2>
 
                     <p>
@@ -80,12 +130,12 @@
 
             <article class="roda">
                 <img 
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8N5WSk5ob2VZCGjdL2gZRceDBMqIexsvx8P9oVQoiCMoECvB5vuZTghIk&s=10"
+                    src="https://images.tcdn.com.br/img/img_prod/813520/jogo_de_rodas_originiais_porsche_911_carrera_2021_aro_20x8_5_e_11_5_prata_5x130_et_53_e_67_usadas_881_1_cae2fce09bc241172a7095614a52e868.jpg"
                     alt="Roda prata"
                 >
                 <div>
                     <h2>
-                        Ro<span>DA</span>
+                        Roda
                     </h2>
 
                     <p>
@@ -96,7 +146,175 @@
                 </div>
             </article>
         </section>
+
+
+        <section class="curiosidades">
+
+            <h2>Curiosidades sobre o Boxster</h2>
+
+            <p class="curiosidades-dica">Toque nos cartões para descobrir</p>
+
+            <div class="grade-curiosidades">
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">01</span>
+                        <p>Qual é a principal característica mecânica do Boxster?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                            Desde a primeira geração, o Boxster utiliza motor central, uma configuração que ajuda na distribuição de peso e foi inspirada nos antigos Porsche 550 Spyder e 718 de competição.
+                        </p>
+                    </div>
+                </button>
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">02</span>
+                        <p>Como afetou a porsche?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                            Quando o 986 chegou ao mercado em 1996, ele ajudou a mudar a situação econômica da Porsche. 
+                            O modelo também compartilhava diversos componentes com o 911 (996), reduzindo os custos de produção.
+                        </p>
+                    </div>
+                </button>
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">03</span>
+                        <p>Por que o Boxster passou a se chamar 718 Boxster?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                            O nome Boxster é uma combinação de Boxer, referência ao motor de cilindros opostos, e Roadster, pelo tipo de carroceria aberta.
+                        </p>
+                    </div>
+                </button>
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">04</span>
+                        <p>De onde surgiu?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                            O Boxster foi apresentado como carro-conceito no Salão de Detroit de 1993. A reação foi tão positiva que a Porsche decidiu manter boa parte do desenho no modelo de produção
+                        </p>
+                    </div>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="evolucao">
+
+            <h2>Evolução do Boxster</h2>
+
+            <div class="evolucao-anos">
+                <button class="ativo" data-ano="1964">1996</button>
+                <button data-ano="1997">2004</button>
+                <button data-ano="2026">2012</button>
+            </div>
+
+            <div class="evolucao-conteudo">
+
+                <div class="evolucao-carro" data-ano="1964">
+
+                    <img src="carros/986 boxster.avif" alt="Porsche 911 de 1964">
+
+                    <div class="apontamento esquerda" style="top: 22%; left: 6%;">
+                        <span class="ponto"></span>
+                        <p>O primeiro da geração Boxster</p>
+                    </div>
+
+                    <div class="apontamento direita" style="top: 55%; right: 6%;">
+                        <span class="ponto"></span>
+                        <p>Começou com motor boxer de 2,5 litros e 204 cv</p>
+                    </div>
+
+                </div>
+
+                <div class="evolucao-carro" data-ano="1997" hidden>
+
+                    <img src="carros/porsche 987.jpg" alt="Porsche 911 de 1997">
+
+                    <div class="apontamento esquerda" style="top: 22%; left: 6%;">
+                        <span class="ponto"></span>
+                        <p>Recebeu novo desenho, interior atualizado e versões mais potentes.</p>
+                    </div>
+
+                    <div class="apontamento direita" style="top: 55%; right: 6%;">
+                        <span class="ponto"></span>
+                        <p>a potência chegou a 310 cv no Boxster S.</p>
+                    </div>
+
+                </div>
+
+                <div class="evolucao-carro" data-ano="2026" hidden>
+
+                    <img src="carros/981 boxster.jpg" alt="Porsche 911 de 2026">
+
+                    <div class="apontamento esquerda" style="top: 22%; left: 6%;">
+                        <span class="ponto"></span>
+                        <p>Trouxe uma carroceria mais leve e um chassi completamente renovado</p>
+                    </div>
+
+                    <div class="apontamento direita" style="top: 55%; right: 6%;">
+                        <span class="ponto"></span>
+                        <p>A potência começava em 265 cv e chegava a 375 cv no Boxster Spyder.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
+
+
+    <footer class="rodape-site">
+
+        <div class="rodape-conteudo">
+
+            <div class="rodape-marca">
+                <img src="img/logotipo-branco.png" alt="Porsche Explorer">
+                <p>
+                    Um site de fã para conhecer os modelos da Porsche:
+                    números, história e curiosidades.
+                </p>
+            </div>
+
+            <nav class="rodape-coluna" aria-label="Navegação do rodapé">
+                <h2>Navegar</h2>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="modelos.html">Todos os modelos</a></li>
+                    <li><a href="911.html">Porsche 911</a></li>
+                </ul>
+            </nav>
+
+            <div class="rodape-coluna">
+                <h2>Aviso</h2>
+                <p>
+                    Projeto de fã, sem vínculo com a Porsche AG.
+                    Porsche e o brasão são marcas registradas de
+                    seus respectivos donos.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="rodape-base">
+            <p>© 2026 Porsche Explorer</p>
+            <a href="#">Voltar ao topo</a>
+        </div>
+
+    </footer>
 
 </body>
 </html>
