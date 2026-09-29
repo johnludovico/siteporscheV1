@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porsche Boxster</title>
+    <title>Porsche Cayman</title>
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="carros.css">
@@ -54,30 +54,31 @@
         <section class="hero">
 
             <video class="video-modelo" autoplay muted loop playsinline>
-                <source src="video/911-banner.mp4" type="video/mp4">
+                <source src="video/cayman-banner.mp4" type="video/mp4">
                 Seu navegador não suporta vídeo em HTML5.
             </video>
 
-            <div class="lateral-container">
-                <img 
-                src="https://a.storyblok.com/f/322327/2616x712/bb2da0d0ae/718-boxster-side.png/m/1800x490/smart/filters:format(avif)"
-                alt="Boxster lateral"
-                class="carro-lateral">
+            <div class="lateral-container" id="cayman-lateral">
+                <img
+                src=""
+                alt="Cayman lateral"
+                class="cayman-lateral">
             </div>
         </section>
 
 
         <section class="modelo">
             
-            <h1> Boxster </h1>
+            <h1> Cayman </h1>
             <img 
-                src="https://cdn.jdpower.com/ChromeImageGallery/Expanded/Transparent/640/2016PRC020003_640/2016PRC020003_640_05.png"
-                alt="Boxster frontal"
-                class="carro-frontal">
+                src="carros/cayman-frontal.png"
+                alt="Cayman frontal"
+                class="carro-frontal"
+                id="cayman-frontal">
 
 
             <div class="especificacao aceleracao">
-                <strong data-valor-final="4.9" data-decimais="1">
+                <strong data-valor-final="4.0" data-decimais="1">
                     <span class="valor-animado">0</span><span>s</span>
                 </strong>
                 <p>
@@ -88,11 +89,11 @@
 
 
             <div class="especificacao desempenho">
-                <strong data-valor-final="275" data-decimais="0">
+                <strong data-valor-final="288" data-decimais="0">
                     <span class="valor-animado">0</span><span>Km/H</span>
                 </strong>
                 <p> velocidade máxima </p>
-                <strong class="potencia" data-valor-final="300" data-decimais="0">
+                <strong class="potencia" data-valor-final="400" data-decimais="0">
                     <span class="valor-animado">0</span><span>CV</span>
                 </strong>
             </div>
@@ -100,7 +101,7 @@
 
 
         <section class="informacoes">
-            <button class="ativo">2024</button>
+            <button class="ativo">2025</button>
             <button>Gasolina</button>
             <button>Tração Traseira</button>
             <button>Automático</button>
@@ -110,7 +111,7 @@
 
             <article class="roda">
                 <img 
-                    src="https://leandrinistore.vteximg.com.br/arquivos/ids/175132-900-900/Roda_Porsche_911_Turbo_S_1_2.jpg?v=636674392124070000"
+                    src="carros/1rodacayman.png"
                     alt="Roda preta"
                 >
 
@@ -120,9 +121,8 @@
                     </h2>
 
                     <p>
-                        Conjunto de rodas de liga<br>
-                        leve com design derivado<br>
-                        do motorsport
+                        Roda de liga leve com design<br>
+                        icônico de 5 raios largos, inspirada no clássico estilo Fuchs
                     </p>
                 </div>
             </article>
@@ -130,7 +130,7 @@
 
             <article class="roda">
                 <img 
-                    src="https://images.tcdn.com.br/img/img_prod/813520/jogo_de_rodas_originiais_porsche_911_carrera_2021_aro_20x8_5_e_11_5_prata_5x130_et_53_e_67_usadas_881_1_cae2fce09bc241172a7095614a52e868.jpg"
+                    src="carros/2rodacayman.png"
                     alt="Roda prata"
                 >
                 <div>
@@ -139,9 +139,9 @@
                     </h2>
 
                     <p>
-                        Conjunto de rodas de liga<br>
-                        leve com design de cinco<br>
-                        raios de braço duplo
+                        Roda de liga leve
+                        com design esportivo
+                        multiraios
                     </p>
                 </div>
             </article>
@@ -150,7 +150,7 @@
 
         <section class="curiosidades">
 
-            <h2>Curiosidades sobre o Boxster</h2>
+            <h2>Curiosidades sobre o Cayman</h2>
 
             <p class="curiosidades-dica">Toque nos cartões para descobrir</p>
 
@@ -212,10 +212,10 @@
 
         <section class="evolucao">
 
-            <h2>Evolução do Boxster</h2>
+            <h2>Evolução do Cayman</h2>
 
             <div class="evolucao-anos">
-                <button class="ativo" data-ano="1964">1964</button>
+                <button class="ativo" data-ano="1964">2005</button>
                 <button data-ano="1997">1997</button>
                 <button data-ano="2026">2026</button>
             </div>
@@ -274,80 +274,6 @@
 
         </section>
 
-
-        <section class="pistas">
-
-            <h2>O 911 nas pistas</h2>
-
-            <div class="grade-pistas">
-
-                <article class="carro-pista">
-
-                    <img src="https://content-hub.imgix.net/7grPNAytvCbr54emyWRHpI/4b7e1dc5f4a397868327e435c329a44c/the-20le-20mans-20winning-20porsche-20rsr-201.jpeg?w=1308" alt="Porsche 911 Carrera RSR">
-
-                    <span class="pista-numero">01</span>
-                    <h3>911 Carrera RSR</h3>
-                    <span class="pista-periodo">1973 — 1977</span>
-
-                    <p>
-                        Um dos primeiros 911 preparados exclusivamente
-                        para corrida, venceu provas de endurance e
-                        ajudou a construir a fama esportiva da marca.
-                    </p>
-
-                </article>
-
-                <article class="carro-pista">
-
-                    <img src="https://www.razaoautomovel.com/wp-content/uploads/2023/11/Porsche-911-GT1-Strassenversion-1.jpg.webp" alt="Porsche 911 GT1">
-
-                    <span class="pista-numero">02</span>
-                    <h3>911 GT1</h3>
-                    <span class="pista-periodo">1996 — 1998</span>
-
-                    <p>
-                        Criado para as 24 Horas de Le Mans, levou o 911
-                        ao topo do automobilismo mundial com a vitória
-                        geral da prova em 1998.
-                    </p>
-
-                </article>
-
-                <article class="carro-pista">
-
-                    <img src="https://hips.hearstapps.com/mtg-prod/65f7df13d444480008fe2b91/046-2023-porsche-911-gt3-cup-gt3-r.jpg" alt="Porsche 911 GT3 R">
-
-                    <span class="pista-numero">03</span>
-                    <h3>911 GT3 R</h3>
-                    <span class="pista-periodo">2010 — atual</span>
-
-                    <p>
-                        Referência no automobilismo de GT moderno,
-                        disputa provas de endurance ao redor do mundo
-                        até hoje.
-                    </p>
-
-                </article>
-
-                <article class="carro-pista">
-
-                    <img src="https://www.carreracup.com.au/wp-content/uploads/2022/05/Porsche-992-GT3-Cup-22-MH_10240-scaled.jpg" alt="Porsche 911 GT3 Cup">
-
-                    <span class="pista-numero">04</span>
-                    <h3>911 GT3 Cup</h3>
-                    <span class="pista-periodo">1998 — atual</span>
-
-                    <p>
-                        Base da Porsche Carrera Cup, é o carro que forma
-                        pilotos em categorias monomarca pelo mundo todo.
-                    </p>
-
-                </article>
-
-            </div>
-
-        </section>
-
     </main>
 
 
@@ -367,7 +293,6 @@
                 <h2>Navegar</h2>
                 <ul>
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="modelos.html">Todos os modelos</a></li>
                     <li><a href="911.html">Porsche 911</a></li>
                 </ul>
             </nav>

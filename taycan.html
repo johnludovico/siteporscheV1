@@ -1,49 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porsche taycan</title>
+    <title>Porsche Taycan</title>
+
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="carros.css">
+
+    <script defer src="main.js"></script>
     <script defer src="carros.js"></script>
 </head>
 <body>
 
+    <header class="cabecalho">
+        <div class="lado-esquerdo">
+            <a href="index.html" class="item-menu">
+                ☰ menu
+            </a>
+
+            <a href="modelos.html" class="item-modelos">
+                <img src="https://companieslogo.com/img/orig/P911.DE-94013588.png?t=1744633652" 
+                alt="porsche"  
+                width="20" height="25">
+            </a>
+
+        </div>
+
+
+        <div class="logo-porsche-texto">
+            <img class="logotipo logotipo-preta" src="img/logotipo-preto.png" alt="Porsche Explorer">
+            <img class="logotipo logotipo-branca" src="img/logotipo-branco.png" alt="Porsche Explorer">
+        </div>
+
+
+        <button
+            class="botao-logo"
+            onclick="alternarTema()">
+
+            <img
+                src="https://images.pixels.com/images/artworkimages/medium/3/high-res-porsche-emblem-isolated-bw-stefano-senise-transparent.png"
+                alt="Porsche">
+
+        </button>
+
+        <img class="perfil perfil-clara" src="img/perfil.png" alt="Perfil do usuário">
+        <img class="perfil perfil-escura" src="img/perfil-branco.png" alt="Perfil do usuário">
+
+    </header>
+
+
     <main class="pagina">
         <section class="hero">
-            <img 
-                src="https://www.avisprestige.com/images/carImage/cropped/porsche-taycan-large-2.png"
-                alt="Porsche Taycan lateral"
+
+            <video class="video-modelo" autoplay muted loop playsinline>
+                <source src="video/Taycan-banner.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo em HTML5.
+            </video>
+
+            <div class="lateral-container" id="taycan-lateral">
+                <img 
+                src="carros/taycan-lateral.avif"
+                alt="Taycan lateral"
                 class="carro-lateral">
+            </div>
         </section>
 
 
         <section class="modelo">
-            <h1>Taycan</h1>
+            
+            <h1 class="taycan-h1"> Taycan </h1>
             <img 
-                src="https://www.webmotors.com.br/imagens/prod/348929/PORSCHE_TAYCAN_GTS_ELETRICO_34892913075951040.webp?s=fill&w=440&h=330&q=80&t=true"
-                alt="Porsche Taycan frontal"
-                class="carro-frontal">
+                src="carros/taycan-frontal.avif"
+                alt="Taycan frontal"
+                class="carro-frontal"
+                id="taycan-frontal">
 
 
             <div class="especificacao aceleracao">
-                <strong>
-                    3,8<span>s</span>
+                <strong data-valor-final="3.8" data-decimais="1">
+                    <span class="valor-animado">0</span><span>s</span>
                 </strong>
                 <p>
                     Aceleração<br>
-                    de 0 a 100
+                    de 0 a 100km/h
                 </p>
             </div>
 
 
             <div class="especificacao desempenho">
-                <strong>
-                    240<span>Km/H</span>
+                <strong data-valor-final="240" data-decimais="0">
+                    <span class="valor-animado">0</span><span>Km/H</span>
                 </strong>
                 <p> velocidade máxima </p>
-                <strong class="potencia">
-                    598<span>CV</span>
+                <strong class="potencia" data-valor-final="598" data-decimais="0">
+                    <span class="valor-animado">0</span><span>CV</span>
                 </strong>
             </div>
         </section>
@@ -51,9 +102,9 @@
 
         <section class="informacoes">
             <button class="ativo">2027</button>
-            <button>eletrico</button>
-            <button>tração integral</button>
-            <button>automatico</button>
+            <button>Elétrico</button>
+            <button>Tração integral</button>
+            <button>Automático</button>
         </section>
 
         <section class="rodas">
@@ -66,7 +117,7 @@
 
                 <div>
                     <h2>
-                        Ro<span>DA</span>
+                        Roda
                     </h2>
 
                     <p>
@@ -85,7 +136,7 @@
                 >
                 <div>
                     <h2>
-                        Ro<span>DA</span>
+                        Roda
                     </h2>
 
                     <p>
@@ -96,7 +147,174 @@
                 </div>
             </article>
         </section>
+
+
+        <section class="curiosidades">
+
+            <h2>Curiosidades sobre o Taycan</h2>
+
+            <p class="curiosidades-dica">Toque nos cartões para descobrir</p>
+
+            <div class="grade-curiosidades">
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">01</span>
+                        <p>O que significa "Taycan"?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                            O nome vem de termos de origem túrquica e pode ser traduzido aproximadamente como “alma de um cavalo jovem e vigoroso”, fazendo referência ao cavalo presente no brasão da Porsche.
+                        </p>
+                    </div>
+                </button>
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">02</span>
+                        <p>O Taycan foi o primeiro Porsche totalmente elétrico?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                             Sim. Apresentado em 2019, o Taycan foi o primeiro modelo de produção totalmente elétrico da Porsche.
+                        </p>
+                    </div>
+                </button>
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">03</span>
+                        <p>Por que o Taycan é tão importante para a história da Porsche?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                            Ele marcou a entrada da Porsche na era dos carros esportivos totalmente elétricos, levando para a eletrificação conceitos de desempenho que a marca já havia desenvolvido em modelos híbridos como o 918 Spyder.
+                        </p>
+                    </div>
+                </button>
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">04</span>
+                        <p>Quanto tempo leva para ele carregar?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                            O Taycan estreou uma arquitetura de 800 volts, permitindo que o carro recarregue até 80% da bateria em cerca de 22 a 30 minutos em carregadores ultrarrápidos de corrente contínua (DC).
+                        </p>
+                    </div>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="evolucao">
+
+            <h2>Evolução do Taycan</h2>
+
+            <div class="evolucao-anos">
+                <button class="ativo" data-ano="1964">1996</button>
+                <button data-ano="1997">2004</button>
+                <button data-ano="2026">2012</button>
+            </div>
+
+            <div class="evolucao-conteudo">
+
+                <div class="evolucao-carro" data-ano="1964">
+
+                    <img src="carros/986 boxster.avif" alt="Porsche 911 de 1964">
+
+                    <div class="apontamento esquerda" style="top: 22%; left: 6%;">
+                        <span class="ponto"></span>
+                        <p>O primeiro da geração Boxster</p>
+                    </div>
+
+                    <div class="apontamento direita" style="top: 55%; right: 6%;">
+                        <span class="ponto"></span>
+                        <p>Começou com motor boxer de 2,5 litros e 204 cv</p>
+                    </div>
+
+                </div>
+
+                <div class="evolucao-carro" data-ano="1997" hidden>
+
+                    <img src="carros/porsche 987.jpg" alt="Porsche 911 de 1997">
+
+                    <div class="apontamento esquerda" style="top: 22%; left: 6%;">
+                        <span class="ponto"></span>
+                        <p>Recebeu novo desenho, interior atualizado e versões mais potentes.</p>
+                    </div>
+
+                    <div class="apontamento direita" style="top: 55%; right: 6%;">
+                        <span class="ponto"></span>
+                        <p>a potência chegou a 310 cv no Boxster S.</p>
+                    </div>
+
+                </div>
+
+                <div class="evolucao-carro" data-ano="2026" hidden>
+
+                    <img src="carros/981 boxster.jpg" alt="Porsche 911 de 2026">
+
+                    <div class="apontamento esquerda" style="top: 22%; left: 6%;">
+                        <span class="ponto"></span>
+                        <p>Trouxe uma carroceria mais leve e um chassi completamente renovado</p>
+                    </div>
+
+                    <div class="apontamento direita" style="top: 55%; right: 6%;">
+                        <span class="ponto"></span>
+                        <p>A potência começava em 265 cv e chegava a 375 cv no Boxster Spyder.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
+
+
+    <footer class="rodape-site">
+
+        <div class="rodape-conteudo">
+
+            <div class="rodape-marca">
+                <img src="img/logotipo-branco.png" alt="Porsche Explorer">
+                <p>
+                    Um site de fã para conhecer os modelos da Porsche:
+                    números, história e curiosidades.
+                </p>
+            </div>
+
+            <nav class="rodape-coluna" aria-label="Navegação do rodapé">
+                <h2>Navegar</h2>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="modelos.html">Todos os modelos</a></li>
+                    <li><a href="911.html">Porsche 911</a></li>
+                </ul>
+            </nav>
+
+            <div class="rodape-coluna">
+                <h2>Aviso</h2>
+                <p>
+                    Projeto de fã, sem vínculo com a Porsche AG.
+                    Porsche e o brasão são marcas registradas de
+                    seus respectivos donos.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="rodape-base">
+            <p>© 2026 Porsche Explorer</p>
+            <a href="#">Voltar ao topo</a>
+        </div>
+
+    </footer>
 
 </body>
 </html>
