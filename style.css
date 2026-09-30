@@ -619,10 +619,7 @@ body.modo-escuro .banner {
 
 }
 
-
-/* Chamada para o questionário, na home */
-
-.link-questionario {
+.link-comparar {
 
     display: block;
 
@@ -653,13 +650,13 @@ body.modo-escuro .banner {
 }
 
 
-.link-questionario:hover {
+.link-comparar:hover {
 
     transform: scale(1.015);
 }
 
 
-.link-questionario span {
+.link-comparar span {
 
     display: block;
 
@@ -671,7 +668,7 @@ body.modo-escuro .banner {
 }
 
 
-body.modo-escuro .link-questionario {
+body.modo-escuro .link-comparar {
 
     background-color: #f4f4f4;
 
@@ -679,7 +676,7 @@ body.modo-escuro .link-questionario {
 }
 
 
-body.modo-escuro .link-questionario span {
+body.modo-escuro .link-comparar span {
 
     color: #555;
 }
@@ -687,7 +684,7 @@ body.modo-escuro .link-questionario span {
 
 /* Página: Descubra seu modelo ideal */
 
-.questionario {
+.comparar {
 
     width: 90%;
 
@@ -926,7 +923,7 @@ body.modo-escuro .quiz-passo {
 
 @media (max-width: 700px) {
 
-    .questionario {
+    .comparar {
 
         margin: 40px auto 60px;
     }

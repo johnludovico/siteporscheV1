@@ -1,0 +1,207 @@
+/* Página: Comparar modelos */
+
+.comparador {
+    width: 92%;
+    max-width: 920px;
+    margin: 60px auto 90px;
+    text-align: center;
+}
+
+.comparador h1 {
+    font-weight: normal;
+    font-size: 36px;
+    margin-bottom: 14px;
+}
+
+.comparador-intro {
+    font-size: 17px;
+    line-height: 25px;
+    max-width: 560px;
+    margin: 0 auto 36px;
+}
+
+/* Seletores */
+
+.comparador-selecao {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.slot {
+    border: 2px solid rgba(120, 120, 120, 0.35);
+    border-radius: 40px;
+    padding: 18px 16px 20px;
+    transition: border-color 0.25s ease;
+}
+
+.slot.preenchido {
+    border-color: #a52b22;
+}
+
+.slot-imagem {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.slot-imagem img {
+    max-width: 100%;
+    max-height: 110px;
+    object-fit: contain;
+}
+
+.slot-vazio {
+    font-size: 14px;
+    color: #777;
+}
+
+.slot select {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 30px;
+    border: 2px solid rgba(120, 120, 120, 0.35);
+    background-color: transparent;
+    color: var(--texto);
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.slot select option {
+    color: #111;
+    background: #fff;
+}
+
+.slot select:focus-visible {
+    outline: 2px solid #a52b22;
+    outline-offset: 2px;
+}
+
+.slot-versao {
+    min-height: 20px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-style: italic;
+    color: #777;
+}
+
+.comparador-aviso,
+.comparador-nota {
+    font-size: 15px;
+    color: #777;
+}
+
+body.modo-escuro .slot-vazio,
+body.modo-escuro .slot-versao,
+body.modo-escuro .comparador-aviso,
+body.modo-escuro .comparador-nota {
+    color: #aaa;
+}
+
+.comparador-aviso {
+    margin-bottom: 30px;
+}
+
+/* Tabela */
+
+.comparador-tabela-area {
+    overflow-x: auto;
+    margin-bottom: 24px;
+}
+
+.comparador-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 520px;
+}
+
+.comparador-tabela th,
+.comparador-tabela td {
+    padding: 16px 12px;
+    border-bottom: 1px solid rgba(120, 120, 120, 0.3);
+    font-size: 17px;
+    vertical-align: middle;
+}
+
+.comparador-tabela th[scope="row"] {
+    text-align: left;
+    font-weight: normal;
+    font-size: 15px;
+    color: #777;
+    width: 24%;
+}
+
+body.modo-escuro .comparador-tabela th[scope="row"] {
+    color: #aaa;
+}
+
+.comparador-tabela thead th {
+    font-weight: normal;
+    font-size: 20px;
+    padding-top: 6px;
+}
+
+.comparador-tabela a {
+    color: inherit;
+}
+
+/* Barrinha proporcional ao melhor valor */
+
+.barra {
+    display: block;
+    height: 5px;
+    margin: 8px auto 0;
+    max-width: 120px;
+    border-radius: 10px;
+    background-color: rgba(120, 120, 120, 0.25);
+    overflow: hidden;
+}
+
+.barra-preenchida {
+    display: block;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(120, 120, 120, 0.7);
+}
+
+/* Melhor valor da linha */
+
+.comparador-tabela td.melhor .valor {
+    color: #a52b22;
+    font-weight: bold;
+}
+
+.comparador-tabela td.melhor .valor::after {
+    content: " ✓";
+}
+
+.comparador-tabela td.melhor .barra-preenchida {
+    background-color: #a52b22;
+}
+
+body.modo-escuro .comparador-tabela td.melhor .valor {
+    color: #ff6b5e;
+}
+
+body.modo-escuro .comparador-tabela td.melhor .barra-preenchida {
+    background-color: #ff6b5e;
+}
+
+@media (max-width: 700px) {
+
+    .comparador h1 {
+        font-size: 28px;
+    }
+
+    .comparador-selecao {
+        grid-template-columns: 1fr;
+    }
+
+    .slot-imagem {
+        height: 90px;
+    }
+}

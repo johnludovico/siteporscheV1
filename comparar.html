@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Comparar modelos | Porsche</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="comparar.css">
+
+    <script defer src="main.js"></script>
+    <script defer src="comparar.js"></script>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="lado-esquerdo">
+            <a href="index.html" class="item-menu">
+                ☰ menu
+            </a>
+
+            <a href="modelos.html" class="item-modelos">
+                <img src="https://companieslogo.com/img/orig/P911.DE-94013588.png?t=1744633652"
+                alt="porsche"
+                width="20" height="25">
+            </a>
+        </div>
+
+        <div class="logo-porsche-texto">
+            <img class="logotipo logotipo-preta" src="img/logotipo-preto.png" alt="Porsche Explorer">
+            <img class="logotipo logotipo-branca" src="img/logotipo-branco.png" alt="Porsche Explorer">
+        </div>
+
+        <button class="botao-logo" onclick="alternarTema()">
+            <img
+                src="https://images.pixels.com/images/artworkimages/medium/3/high-res-porsche-emblem-isolated-bw-stefano-senise-transparent.png"
+                alt="Porsche">
+        </button>
+
+        <img class="perfil perfil-clara" src="img/perfil.png" alt="Perfil do usuário">
+        <img class="perfil perfil-escura" src="img/perfil-branco.png" alt="Perfil do usuário">
+    </header>
+
+
+    <main class="comparador">
+
+        <h1>Compare os modelos</h1>
+
+        <p class="comparador-intro">
+            Escolha de 2 a 3 modelos e veja lado a lado quem é mais rápido,
+            mais potente e mais espaçoso. O melhor valor de cada linha fica destacado.
+        </p>
+
+        <div class="comparador-selecao" id="comparador-selecao"></div>
+
+        <p class="comparador-aviso" id="comparador-aviso">
+            Escolha pelo menos 2 modelos para comparar.
+        </p>
+
+        <div class="comparador-tabela-area" id="comparador-tabela-area" hidden>
+            <table class="comparador-tabela" id="comparador-tabela"></table>
+        </div>
+
+        <p class="comparador-nota">
+            Os números são da versão indicada abaixo do nome de cada modelo.
+        </p>
+
+    </main>
+
+</body>
+
+</html>

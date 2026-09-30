@@ -175,6 +175,38 @@ body {
 
 }
 
+/* Nome da versão: no topo do hero (sobre o vídeo), longe dos carros */
+
+.hero .versao-modelo {
+
+    position: absolute;
+
+    top: 24px;
+
+    left: 0;
+
+    right: 0;
+
+    z-index: 3;
+
+    text-align: center;
+
+    color: #fff;
+
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+
+    font-family: Georgia, Arial, sans-serif;
+
+    font-style:italic;
+
+    font-size: 22px;
+
+    font-weight: 400;
+
+    letter-spacing: 1px;
+
+}
+
 
 .carro-frontal {
     position: absolute;
@@ -237,10 +269,6 @@ body {
 
     filter: drop-shadow(0 20px 8px rgba(0, 0, 0, 0.35));
 }
-
-
-/* Entrada dos carros: começam escondidos e o JS põe .carregado no body.
-   Usa "translate" (e não "transform") pra não brigar com o hover do carro frontal. */
 
 .carro-lateral,
 .carro-frontal {
@@ -1600,6 +1628,34 @@ body.modo-escuro .rodape-base {
         gap: 10px;
 
         padding: 20px 20px 26px;
+
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .hero .versao-modelo {
+
+        top: 26px;
+
+        font-size: 19px;
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .hero .versao-modelo {
+
+        top: 28px;
+
+        font-size: 16px;
+
+        letter-spacing: 0.5px;
 
     }
 
