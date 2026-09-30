@@ -106,6 +106,14 @@ body {
     bottom: -160px;
 }
 
+#lateral-918 {
+    bottom: -190px;
+}
+
+#lateral-959 {
+    bottom: -240px;
+}
+
 .carro-lateral {
 
     display: block;
@@ -259,6 +267,11 @@ body {
 
 #panamera-frontal {
     width: 45%;
+    top:300px;
+}
+
+#frontal-918 {
+    width: 50%;
     top:300px;
 }
 
