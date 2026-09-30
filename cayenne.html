@@ -7,7 +7,6 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="carros.css">
-    <link rel="stylesheet" href="footer.css">
 
     <script defer src="main.js"></script>
     <script defer src="carros.js"></script>
@@ -55,15 +54,16 @@
         <section class="hero">
 
             <video class="video-modelo" autoplay muted loop playsinline>
-                <source src="video/911-banner.mp4" type="video/mp4">
+                <source src="video/cayenne-banner.mp4" type="video/mp4">
                 Seu navegador não suporta vídeo em HTML5.
             </video>
 
-            <div class="lateral-container">
+            <div class="lateral-container" id="cayenne-lateral">
                 <img 
-                src="carros/Cayenne-lateral.webp"
-                alt="Porsche 911 lateral"
-                class="carro-lateral">
+                src="carros/cayenne-lateral.avif"
+                alt="Porsche Cayenne lateral"
+                class="carro-lateral"
+                style="transform: translate(05px, -80px);">
             </div>
         </section>
 
@@ -72,13 +72,14 @@
             
             <h1> Cayenne </h1>
             <img 
-                src="carros/cayenne-frontal.webp"
-                alt="Porsche 911 frontal"
-                class="carro-frontal">
+                src="carros/cayenne-frontal.png"
+                alt="Porsche Cayenne frontal"
+                class="carro-frontal"
+                id="cayenne-frontal">
 
 
             <div class="especificacao aceleracao">
-                <strong data-valor-final="5.7" data-decimais="1">
+                <strong data-valor-final="2.5" data-decimais="1">
                     <span class="valor-animado">0</span><span>s</span>
                 </strong>
                 <p>
@@ -89,11 +90,11 @@
 
 
             <div class="especificacao desempenho">
-                <strong data-valor-final="248" data-decimais="0">
+                <strong data-valor-final="260" data-decimais="0">
                     <span class="valor-animado">0</span><span>Km/H</span>
                 </strong>
                 <p> velocidade máxima </p>
-                <strong class="potencia" data-valor-final="495" data-decimais="0">
+                <strong class="potencia" data-valor-final="1156" data-decimais="0">
                     <span class="valor-animado">0</span><span>CV</span>
                 </strong>
             </div>
@@ -102,8 +103,8 @@
 
         <section class="informacoes">
             <button class="ativo">2027</button>
-            <button>Gasolina</button>
-            <button>Tração Traseira</button>
+            <button>Elétrico</button>
+            <button>Tração Integral</button>
             <button>Automático</button>
         </section>
 
@@ -111,7 +112,7 @@
 
             <article class="roda">
                 <img 
-                    src="https://leandrinistore.vteximg.com.br/arquivos/ids/175132-900-900/Roda_Porsche_911_Turbo_S_1_2.jpg?v=636674392124070000"
+                    src="carros/2rodacayenne.png"
                     alt="Roda preta"
                 >
 
@@ -131,7 +132,7 @@
 
             <article class="roda">
                 <img 
-                    src="https://images.tcdn.com.br/img/img_prod/813520/jogo_de_rodas_originiais_porsche_911_carrera_2021_aro_20x8_5_e_11_5_prata_5x130_et_53_e_67_usadas_881_1_cae2fce09bc241172a7095614a52e868.jpg"
+                    src="carros/1rodacayenne.png"
                     alt="Roda prata"
                 >
                 <div>
@@ -151,7 +152,7 @@
 
         <section class="curiosidades">
 
-            <h2>Curiosidades sobre o 911</h2>
+            <h2>Curiosidades sobre o Cayenne</h2>
 
             <p class="curiosidades-dica">Toque nos cartões para descobrir</p>
 
@@ -160,13 +161,11 @@
                 <button class="cartao-curiosidade" type="button">
                     <div class="face frente">
                         <span class="numero-curiosidade">01</span>
-                        <p>Desde quando ele existe?</p>
+                        <p>Quando surgiu o Cayenne?</p>
                     </div>
                     <div class="face verso">
                         <p>
-                            O 911 é vendido desde 1964 e nunca saiu de
-                            linha — é o modelo mais antigo ainda em
-                            produção da Porsche.
+                            A primeira geração chegou em 2002, tornando-se o terceiro modelo da Porsche na época, depois do 911 e do Boxster.
                         </p>
                     </div>
                 </button>
@@ -174,13 +173,11 @@
                 <button class="cartao-curiosidade" type="button">
                     <div class="face frente">
                         <span class="numero-curiosidade">02</span>
-                        <p>Por que "911" e não "901"?</p>
+                        <p>Por que o Cayenne foi tão importante para a Porsche?</p>
                     </div>
                     <div class="face verso">
                         <p>
-                            O nome original ia ser 901, mas a Peugeot já
-                            tinha registrado esse padrão de nomes pra
-                            carros. A Porsche trocou pro 911.
+                            Ele ajudou a Porsche a expandir significativamente seu mercado, trazendo novos clientes para a marca e tornando-se uma das principais linhas de veículos da empresa.
                         </p>
                     </div>
                 </button>
@@ -188,13 +185,12 @@
                 <button class="cartao-curiosidade" type="button">
                     <div class="face frente">
                         <span class="numero-curiosidade">03</span>
-                        <p>Cadê o motor?</p>
+                        <p>O Cayenne é realmente capaz de andar fora da estrada?</p>
                     </div>
                     <div class="face verso">
                         <p>
-                            O motor fica atrás do eixo traseiro, um
-                            layout raro que a Porsche manteve mesmo
-                            sendo mais difícil de equilibrar.
+                            Sim. Desde a primeira geração, o Cayenne foi desenvolvido não apenas como SUV de estrada, 
+                            mas também com capacidades off-road, incluindo suspensão a ar e grande altura livre do solo em determinadas configurações.
                         </p>
                     </div>
                 </button>
@@ -202,13 +198,11 @@
                 <button class="cartao-curiosidade" type="button">
                     <div class="face frente">
                         <span class="numero-curiosidade">04</span>
-                        <p>As peças mudam muito?</p>
+                        <p>Qual marca participou do desenvolvimento do Cayenne?</p>
                     </div>
                     <div class="face verso">
                         <p>
-                            A Porsche mantém, de propósito, boa parte da
-                            estrutura compatível entre gerações — mesmo
-                            depois de décadas de história do modelo.
+                            A primeira geração do Cayenne foi desenvolvida em parceria com a Volkswagen e compartilha a mesma base estrutural do Volkswagen Touareg e do Audi Q7.
                         </p>
                     </div>
                 </button>
@@ -220,44 +214,43 @@
 
         <section class="evolucao">
 
-            <h2>Evolução do 911</h2>
+            <h2>Evolução do Cayenne</h2>
 
             <div class="evolucao-anos">
-                <button class="ativo" data-ano="1964">1964</button>
-                <button data-ano="1997">1997</button>
-                <button data-ano="2026">2026</button>
+                <button class="ativo" data-ano="1964">2003</button>
+                <button data-ano="1997">2011</button>
             </div>
 
             <div class="evolucao-conteudo">
 
                 <div class="evolucao-carro" data-ano="1964">
 
-                    <img src="carros/1964-branco.jpg" alt="Porsche 911 de 1964">
+                    <img src="https://uk-plates-bucket-prod.ams3.digitaloceanspaces.com/car/Porsche/1703/w1.jpg" alt="Porsche 911 de 1964">
 
                     <div class="apontamento esquerda" style="top: 22%; left: 6%;">
                         <span class="ponto"></span>
-                        <p>Motor boxer refrigerado a ar, a marca registrada dos primeiros 911</p>
+                        <p>Foi o primeiro SUV da Porsche.</p>
                     </div>
 
                     <div class="apontamento direita" style="top: 55%; right: 6%;">
                         <span class="ponto"></span>
-                        <p>Faróis redondos e carroceria compacta, o desenho que define o modelo até hoje</p>
+                        <p>Possuía recursos como reduzida e bloqueio do diferencial central em determinadas configurações.</p>
                     </div>
 
                 </div>
 
                 <div class="evolucao-carro" data-ano="1997" hidden>
 
-                    <img src="carros/1997-branco.jpg" alt="Porsche 911 de 1997">
+                    <img src="https://www.akioverland.com/cdn/shop/files/0d5f061ef6ce99bad609c66e8f61d7f6.webp?v=1757751139&width=1400" alt="Porsche 911 de 1997">
 
                     <div class="apontamento esquerda" style="top: 22%; left: 6%;">
                         <span class="ponto"></span>
-                        <p>Primeira geração do 911 com motor refrigerado a água</p>
+                        <p>O 958 marcou uma evolução importante na eletrificação da linha Cayenne.</p>
                     </div>
 
                     <div class="apontamento direita" style="top: 55%; right: 6%;">
                         <span class="ponto"></span>
-                        <p>Faróis ovais, um visual bem diferente dos clássicos redondos</p>
+                        <p>recebeu sistemas eletrônicos mais avançados e maior eficiência</p>
                     </div>
 
                 </div>
@@ -280,86 +273,47 @@
 
             </div>
 
-        </section>
-
-
         <section class="pistas">
 
-            <h2>O 911 nas pistas</h2>
+            <h2>O Cayenne nas pistas</h2>
 
             <div class="grade-pistas">
 
                 <article class="carro-pista">
 
-                    <img src="https://content-hub.imgix.net/7grPNAytvCbr54emyWRHpI/4b7e1dc5f4a397868327e435c329a44c/the-20le-20mans-20winning-20porsche-20rsr-201.jpeg?w=1308" alt="Porsche 911 Carrera RSR">
+                    <img src="https://exclusivecarregistry.com/images/cars/preview/thumb_114397.jpg" alt="Porsche 911 Carrera RSR">
 
                     <span class="pista-numero">01</span>
-                    <h3>911 Carrera RSR</h3>
-                    <span class="pista-periodo">1973 — 1977</span>
+                    <h3>Cayenne Transsyberia Rally</h3>
+                    <span class="pista-periodo">2006 — 2008</span>
 
                     <p>
-                        Um dos primeiros 911 preparados exclusivamente
-                        para corrida, venceu provas de endurance e
-                        ajudou a construir a fama esportiva da marca.
+                      A Porsche utilizou Cayennes preparados para disputar o Rally Transsyberia, uma competição de longa distância que atravessava terrenos extremamente difíceis entre a Europa e a Ásia.
                     </p>
 
                 </article>
 
                 <article class="carro-pista">
 
-                    <img src="https://www.razaoautomovel.com/wp-content/uploads/2023/11/Porsche-911-GT1-Strassenversion-1.jpg.webp" alt="Porsche 911 GT1">
+                    <img src="https://i.redd.it/7zob5q6ouxa61.jpg" alt="Porsche 911 GT1">
 
                     <span class="pista-numero">02</span>
-                    <h3>911 GT1</h3>
-                    <span class="pista-periodo">1996 — 1998</span>
+                    <h3>Cayenne S Transsyberia</h3>
+                    <span class="pista-periodo"> 2006 </span>
 
                     <p>
-                        Criado para as 24 Horas de Le Mans, levou o 911
-                        ao topo do automobilismo mundial com a vitória
-                        geral da prova em 1998.
-                    </p>
-
-                </article>
-
-                <article class="carro-pista">
-
-                    <img src="https://hips.hearstapps.com/mtg-prod/65f7df13d444480008fe2b91/046-2023-porsche-911-gt3-cup-gt3-r.jpg" alt="Porsche 911 GT3 R">
-
-                    <span class="pista-numero">03</span>
-                    <h3>911 GT3 R</h3>
-                    <span class="pista-periodo">2010 — atual</span>
-
-                    <p>
-                        Referência no automobilismo de GT moderno,
-                        disputa provas de endurance ao redor do mundo
-                        até hoje.
-                    </p>
-
-                </article>
-
-                <article class="carro-pista">
-
-                    <img src="https://www.carreracup.com.au/wp-content/uploads/2022/05/Porsche-992-GT3-Cup-22-MH_10240-scaled.jpg" alt="Porsche 911 GT3 Cup">
-
-                    <span class="pista-numero">04</span>
-                    <h3>911 GT3 Cup</h3>
-                    <span class="pista-periodo">1998 — atual</span>
-
-                    <p>
-                        Base da Porsche Carrera Cup, é o carro que forma
-                        pilotos em categorias monomarca pelo mundo todo.
+                       A Porsche criou uma versão especial baseada no Cayenne S para o rali. O carro recebeu preparação específica para competição, incluindo equipamentos de proteção, suspensão modificada e componentes voltados ao uso fora de estrada.
                     </p>
 
                 </article>
 
             </div>
-
-        </section>
+     </section>
 
     </main>
 
 
-    <footer class="rodape-site">
+        <footer class="rodape-site">
 
         <div class="rodape-conteudo">
 
@@ -375,7 +329,6 @@
                 <h2>Navegar</h2>
                 <ul>
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="modelos.html">Todos os modelos</a></li>
                     <li><a href="911.html">Porsche 911</a></li>
                 </ul>
             </nav>

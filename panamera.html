@@ -1,13 +1,319 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porsche panamera</title>
+    <title>Porsche Panamera</title>
+
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="carros.css">
+
+    <script defer src="main.js"></script>
     <script defer src="carros.js"></script>
 </head>
 <body>
-    
+
+    <header class="cabecalho">
+        <div class="lado-esquerdo">
+            <a href="index.html" class="item-menu">
+                ☰ menu
+            </a>
+
+            <a href="modelos.html" class="item-modelos">
+                <img src="https://companieslogo.com/img/orig/P911.DE-94013588.png?t=1744633652" 
+                alt="porsche"  
+                width="20" height="25">
+            </a>
+
+        </div>
+
+
+        <div class="logo-porsche-texto">
+            <img class="logotipo logotipo-preta" src="img/logotipo-preto.png" alt="Porsche Explorer">
+            <img class="logotipo logotipo-branca" src="img/logotipo-branco.png" alt="Porsche Explorer">
+        </div>
+
+
+        <button
+            class="botao-logo"
+            onclick="alternarTema()">
+
+            <img
+                src="https://images.pixels.com/images/artworkimages/medium/3/high-res-porsche-emblem-isolated-bw-stefano-senise-transparent.png"
+                alt="Porsche">
+
+        </button>
+
+        <img class="perfil perfil-clara" src="img/perfil.png" alt="Perfil do usuário">
+        <img class="perfil perfil-escura" src="img/perfil-branco.png" alt="Perfil do usuário">
+
+    </header>
+
+
+    <main class="pagina">
+        <section class="hero">
+
+            <video class="video-modelo" autoplay muted loop playsinline>
+                <source src="video/panamera-banner.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo em HTML5.
+            </video>
+
+            <div class="lateral-container" id="boxster-lateral">
+                <img 
+                src="carros/panamera-lateral.avif"
+                alt="Panamera lateral"
+                class="carro-lateral"
+                style="transform: translate(08px, -50px);">
+            </div>
+        </section>
+
+
+        <section class="modelo">
+            
+            <h1> Panamera </h1>
+            <img 
+                src="carros/panamera-frontal.avif"
+                alt="Panamera frontal"
+                class="carro-frontal"
+                id="panamera-frontal">
+
+
+            <div class="especificacao aceleracao">
+                <strong data-valor-final="4.1" data-decimais="1">
+                    <span class="valor-animado">0</span><span>s</span>
+                </strong>
+                <p>
+                    Aceleração<br>
+                    de 0 a 100km/h
+                </p>
+            </div>
+
+
+            <div class="especificacao desempenho">
+                <strong data-valor-final="280" data-decimais="0">
+                    <span class="valor-animado">0</span><span>Km/H</span>
+                </strong>
+                <p> velocidade máxima </p>
+                <strong class="potencia" data-valor-final="470" data-decimais="0">
+                    <span class="valor-animado">0</span><span>CV</span>
+                </strong>
+            </div>
+        </section>
+
+
+        <section class="informacoes">
+            <button class="ativo">2024</button>
+            <button>Híbrido</button>
+            <button>Tração Integral</button>
+            <button>Automático</button>
+        </section>
+
+        <section class="rodas">
+
+            <article class="roda">
+                <img 
+                    src="carros/roda2panamera.png"
+                    alt="Roda preta"
+                >
+
+                <div>
+                    <h2>
+                        Roda
+                    </h2>
+
+                    <p>
+                        Roda de liga leve com design<br>
+                        icônico de 5 raios largos, inspirada no clássico estilo Fuchs
+                    </p>
+                </div>
+            </article>
+
+
+            <article class="roda">
+                <img 
+                    src="carros/roda1panamera.png"
+                    alt="Roda prata"
+                >
+                <div>
+                    <h2>
+                        Roda
+                    </h2>
+
+                    <p>
+                        Roda de liga leve
+                        com design esportivo
+                        multiraios
+                    </p>
+                </div>
+            </article>
+        </section>
+
+
+        <section class="curiosidades">
+
+            <h2>Curiosidades sobre o Panamera</h2>
+
+            <p class="curiosidades-dica">Toque nos cartões para descobrir</p>
+
+            <div class="grade-curiosidades">
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">01</span>
+                        <p>O que significa o nome "Panamera"?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                            O nome é uma homenagem à famosa e perigosa corrida de resistência Carrera Panamericana, realizada no México durante os anos 1950. A Porsche obteve grandes sucessos nessa competição, o que também inspirou o batismo da linha "Carrera".
+                        </p>
+                    </div>
+                </button>
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">02</span>
+                        <p>As portas do Panamera têm um segredo mecânico?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                             As portas contam com um sistema de fechamento por sucção (soft-close) e uma trava especial que mantém a porta aberta exatamente na posição em que você a deixar, facilitando a entrada e saída em garagens apertadas ou ladeiras.
+                        </p>
+                    </div>
+                </button>
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">03</span>
+                        <p>Ele tem um botão de "potência máxima instantânea"?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                             Nas versões híbridas, há um seletor no volante que aciona o modo Sport Response. Ao apertar o botão, o carro entrega a potência máxima combinada do motor a combustão e do motor elétrico por 20 segundos, ideal para ultrapassagens rápidas.
+                        </p>
+                    </div>
+                </button>
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">04</span>
+                        <p>O Macan tem versões elétricas?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                            Sim. A Porsche introduziu o Macan EV (totalmente elétrico), construído sobre a nova plataforma PPE (Premium Platform Electric) desenvolvida em parceria com a Audi, marcando uma nova era para o SUV mais vendido da fabricante.
+                        </p>
+                    </div>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="evolucao">
+
+            <h2>Evolução do Panamera</h2>
+
+            <div class="evolucao-anos">
+                <button class="ativo" data-ano="1964">2006</button>
+                <button data-ano="1997">2016</button>
+            </div>
+
+            <div class="evolucao-conteudo">
+
+                <div class="evolucao-carro" data-ano="1964">
+
+                    <img src="https://differentcarreview.com/wp-content/uploads/2019/01/63.jpg" alt="Porsche 911 de 1964">
+
+                    <div class="apontamento esquerda" style="top: 22%; left: 6%;">
+                        <span class="ponto"></span>
+                        <p>O 970 foi o primeiro Panamera produzido em série.</p>
+                    </div>
+
+                    <div class="apontamento direita" style="top: 55%; right: 6%;">
+                        <span class="ponto"></span>
+                        <p>Ele trouxe a proposta de um Gran Turismo de quatro portas, combinando espaço para passageiros com desempenho de carro esportivo.</p>
+                    </div>
+
+                </div>
+
+                <div class="evolucao-carro" data-ano="1997" hidden>
+
+                    <img src="https://images.pistonheads.com/nimg/50348/blobid0.jpg" alt="Porsche 911 de 1997">
+
+                    <div class="apontamento esquerda" style="top: 22%; left: 6%;">
+                        <span class="ponto"></span>
+                        <p>O 971 trouxe uma evolução significativa no design, na tecnologia e no desempenho.</p>
+                    </div>
+
+                    <div class="apontamento direita" style="top: 55%; right: 6%;">
+                        <span class="ponto"></span>
+                        <p>A carroceria ficou mais elegante e a Porsche ampliou bastante a oferta de versões híbridas.</p>
+                    </div>
+
+                </div>
+
+                <div class="evolucao-carro" data-ano="2026" hidden>
+
+                    <img src="carros/981 boxster.jpg" alt="Porsche 911 de 2026">
+
+                    <div class="apontamento esquerda" style="top: 22%; left: 6%;">
+                        <span class="ponto"></span>
+                        <p>Trouxe uma carroceria mais leve e um chassi completamente renovado</p>
+                    </div>
+
+                    <div class="apontamento direita" style="top: 55%; right: 6%;">
+                        <span class="ponto"></span>
+                        <p>A potência começava em 265 cv e chegava a 375 cv no Boxster Spyder.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="rodape-site">
+
+        <div class="rodape-conteudo">
+
+            <div class="rodape-marca">
+                <img src="img/logotipo-branco.png" alt="Porsche Explorer">
+                <p>
+                    Um site de fã para conhecer os modelos da Porsche:
+                    números, história e curiosidades.
+                </p>
+            </div>
+
+            <nav class="rodape-coluna" aria-label="Navegação do rodapé">
+                <h2>Navegar</h2>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="modelos.html">Todos os modelos</a></li>
+                    <li><a href="911.html">Porsche 911</a></li>
+                </ul>
+            </nav>
+
+            <div class="rodape-coluna">
+                <h2>Aviso</h2>
+                <p>
+                    Projeto de fã, sem vínculo com a Porsche AG.
+                    Porsche e o brasão são marcas registradas de
+                    seus respectivos donos.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="rodape-base">
+            <p>© 2026 Porsche Explorer</p>
+            <a href="#">Voltar ao topo</a>
+        </div>
+
+    </footer>
+
 </body>
 </html>

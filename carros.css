@@ -76,8 +76,6 @@ body {
 
     left: 50%;
 
-    bottom: -60px;
-
     transform: translateX(-50%);
 
     width: 90%;
@@ -85,6 +83,27 @@ body {
     max-width: 1000px;
 
     z-index: 1;
+}
+
+#lateral-911 {
+    bottom: -60px;
+}
+
+#cayman-lateral {
+    bottom: -280px;
+    left: 50%;
+}
+
+#boxster-lateral {
+    bottom: -130px;
+}
+
+#taycan-lateral {
+    bottom: -140px;
+}
+
+#cayenne-lateral {
+    bottom: -160px;
 }
 
 .carro-lateral {
@@ -130,7 +149,7 @@ body {
 
     position: relative;
 
-    top: 30px;
+    top: 60px;
 
     left: 4%;
 
@@ -144,7 +163,7 @@ body {
 
     font-size: clamp(
         130px,
-        20vw,
+        15vw,
         330px
     );
 
@@ -161,9 +180,6 @@ body {
     position: absolute;
     z-index: 2;
 
-    width: 60%;
-    max-width: 640px;
-
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -178,6 +194,43 @@ body {
         transform 0.4s ease,
         filter 0.4s ease;
 }
+
+#cayman-frontal {
+    top: 300px;
+    width:60%;
+}
+
+#frontal-911 {
+    width: 60%;
+    max-width: 640px;
+    top:250px;
+}
+
+#boxster-frontal {
+    width:60%;
+    top: 300px;
+}
+
+#taycan-frontal {
+    width: 45%;
+    top: 300px;
+}
+
+#cayenne-frontal {
+    width: 72%;
+}
+
+#macan-frontal {
+    width: 43%;
+    top: 300px;
+}
+
+#panamera-frontal {
+    width: 45%;
+    top:300px;
+}
+
+
 
 .carro-frontal:hover {
     transform: scale(1.02);
