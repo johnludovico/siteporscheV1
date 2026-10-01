@@ -244,21 +244,351 @@ body.modo-escuro .logotipo-branca {
 }
 
 
+/* Banner da página inicial: vídeo em tela cheia com texto por cima */
+
 .banner {
 
+    position: relative;
+
+    height: calc(100vh - 78px);
+
+    height: calc(100svh - 78px);
+
+    min-height: 480px;
+
     overflow: hidden;
+
+    background-color: #000;
 }
 
 
 .video-banner {
 
+    position: absolute;
+
+    inset: 0;
+
     width: 100%;
 
-    height: 500px;
+    height: 100%;
 
     object-fit: cover;
 
     display: block;
+
+    animation: banner-video-entrada 1.8s ease both;
+}
+
+
+/* camada escura por cima do vídeo */
+
+.banner::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.35) 0%,
+        rgba(0, 0, 0, 0.55) 55%,
+        rgba(0, 0, 0, 0.8) 100%
+    );
+
+    pointer-events: none;
+}
+
+
+.banner-conteudo {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0 24px;
+
+    text-align: center;
+
+    color: #fff;
+}
+
+
+.banner-titulo {
+
+    font-weight: normal;
+
+    font-size: clamp(42px, 7vw, 92px);
+
+    letter-spacing: 0.03em;
+
+    line-height: 1.05;
+
+    animation: banner-subir 1s ease 0.4s both;
+}
+
+
+.banner-titulo img {
+
+    display: block;
+
+    width: clamp(260px, 45vw, 560px);
+
+    height: auto;
+
+    filter: drop-shadow(0 2px 20px rgba(0, 0, 0, 0.4));
+}
+
+
+.banner-texto {
+
+    max-width: 600px;
+
+    margin-top: 18px;
+
+    font-size: clamp(16px, 2vw, 20px);
+
+    line-height: 1.6;
+
+    color: rgba(255, 255, 255, 0.88);
+
+    animation: banner-subir 1s ease 0.7s both;
+}
+
+
+.banner-botao {
+
+    display: inline-block;
+
+    margin-top: 36px;
+
+    padding: 14px 36px;
+
+    border: 2px solid #fff;
+
+    border-radius: 40px;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    animation: banner-subir 1s ease 1s both;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.25s ease;
+}
+
+
+.banner-botao:hover {
+
+    background-color: #fff;
+
+    color: #111;
+
+    transform: scale(1.04);
+}
+
+
+.banner-botao:focus-visible {
+
+    outline: 2px solid #fff;
+
+    outline-offset: 4px;
+}
+
+
+@keyframes banner-video-entrada {
+
+    from {
+        opacity: 0;
+        transform: scale(1.08);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+@keyframes banner-subir {
+
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Página inicial: o menu some em cima do banner e aparece
+   fixo no topo quando a pessoa chega na parte dos modelos */
+
+body.pagina-inicial .cabecalho {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    z-index: 100;
+
+    opacity: 0;
+
+    transform: translateY(-100%);
+
+    pointer-events: none;
+
+    visibility: hidden;
+
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease,
+        background-color 0.7s ease,
+        visibility 0s linear 0.5s;
+}
+
+
+body.pagina-inicial.menu-visivel .cabecalho {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+    visibility: visible;
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease,
+        background-color 0.7s ease,
+        visibility 0s;
+
+    pointer-events: auto;
+}
+
+
+/* a área transparente do logotipo não pode bloquear cliques embaixo dele */
+
+body.pagina-inicial .logo-porsche-texto {
+
+    pointer-events: none;
+}
+
+
+/* sem o menu em cima, o banner ocupa a tela toda */
+
+body.pagina-inicial .banner {
+
+    height: 100vh;
+
+    height: 100svh;
+}
+
+
+/* o botão do banner para logo abaixo do menu fixo */
+
+body.pagina-inicial #modelos {
+
+    scroll-margin-top: 78px;
+}
+
+
+/* Menu e perfil brancos por cima do banner,
+   na mesma posição que ficam no cabeçalho */
+
+.banner-menu {
+
+    position: absolute;
+
+    left: 18px;
+
+    top: 16px;
+
+    z-index: 3;
+
+    color: #fff;
+
+    font-size: 19px;
+
+    line-height: 20px;
+
+    text-decoration: none;
+
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+
+    animation: banner-aparecer 1s ease 1.2s both;
+}
+
+
+.banner-menu:hover {
+
+    text-decoration: underline;
+}
+
+
+.banner-menu:focus-visible,
+.perfil:focus-visible {
+
+    outline: 2px solid #a52b22;
+
+    outline-offset: 4px;
+}
+
+
+.banner .banner-perfil {
+
+    z-index: 3;
+
+    animation: banner-aparecer 1s ease 1.2s both;
+}
+
+
+@keyframes banner-aparecer {
+
+    from { opacity: 0; }
+
+    to { opacity: 1; }
+}
+
+
+/* quem desativou animações no sistema vê tudo parado */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .video-banner,
+    .banner-titulo,
+    .banner-texto,
+    .banner-botao,
+    .banner-menu,
+    .banner .banner-perfil,
+    body.pagina-inicial .cabecalho {
+
+        animation: none;
+
+        transition: none;
+    }
 }
 
 
@@ -570,13 +900,6 @@ body.modo-escuro .banner {
         width: 42px;
 
         height: 50px;
-
-    }
-
-
-    .banner {
-
-        height: 350px;
 
     }
 
@@ -938,5 +1261,209 @@ body.modo-escuro .quiz-passo {
     .quiz-pergunta-texto {
 
         font-size: 22px;
+    }
+}
+
+
+/* ---------- Menu lateral ---------- */
+
+.menu-lateral-fundo {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 200;
+
+    background-color: rgba(0, 0, 0, 0.45);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0s linear 0.35s;
+}
+
+
+.menu-lateral {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    bottom: 0;
+
+    z-index: 201;
+
+    width: min(320px, 85vw);
+
+    padding: 22px 26px 40px;
+
+    overflow-y: auto;
+
+    background-color: var(--fundo);
+
+    color: var(--texto);
+
+    box-shadow: 6px 0 30px rgba(0, 0, 0, 0.25);
+
+    transform: translateX(-100%);
+
+    visibility: hidden;
+
+    transition:
+        transform 0.35s ease,
+        background-color 0.7s ease,
+        visibility 0s linear 0.35s;
+}
+
+
+body.menu-aberto {
+
+    overflow: hidden;
+}
+
+
+body.menu-aberto .menu-lateral-fundo {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transition: opacity 0.35s ease;
+}
+
+
+body.menu-aberto .menu-lateral {
+
+    transform: translateX(0);
+
+    visibility: visible;
+
+    transition:
+        transform 0.35s ease,
+        background-color 0.7s ease;
+}
+
+
+.menu-lateral-topo {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 26px;
+
+    font-size: 19px;
+}
+
+
+.menu-lateral-fechar {
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--texto);
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    padding: 0 4px;
+}
+
+
+.menu-lateral h2 {
+
+    font-weight: normal;
+
+    font-size: 14px;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    color: #777;
+
+    margin: 28px 0 8px;
+}
+
+
+body.modo-escuro .menu-lateral h2 {
+
+    color: #aaa;
+}
+
+
+.menu-lateral ul {
+
+    list-style: none;
+}
+
+
+.menu-lateral a {
+
+    display: block;
+
+    padding: 9px 0;
+
+    color: var(--texto);
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    border-bottom: 1px solid rgba(120, 120, 120, 0.2);
+
+    transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+
+.menu-lateral a:hover {
+
+    color: #a52b22;
+
+    padding-left: 6px;
+}
+
+
+.menu-lateral a[aria-current="page"] {
+
+    color: #a52b22;
+}
+
+
+body.modo-escuro .menu-lateral a:hover,
+body.modo-escuro .menu-lateral a[aria-current="page"] {
+
+    color: #ff6b5e;
+}
+
+
+.menu-lateral-fechar:focus-visible,
+.menu-lateral a:focus-visible {
+
+    outline: 2px solid #a52b22;
+
+    outline-offset: 3px;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .menu-lateral,
+    .menu-lateral-fundo,
+    .menu-lateral a {
+
+        transition: none;
     }
 }

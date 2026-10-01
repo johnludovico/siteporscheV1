@@ -1,0 +1,330 @@
+/* Login, favoritos e botão de favoritar */
+
+.conta [hidden],
+.favoritos [hidden] {
+    display: none !important;
+}
+
+
+/* ---------- botão padrão ---------- */
+
+.botao-conta {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: inherit;
+    font-size: 17px;
+    padding: 14px 34px;
+    border-radius: 40px;
+    text-decoration: none;
+    text-align: center;
+    transition:
+        transform 0.25s ease,
+        background-color 0.7s ease,
+        color 0.7s ease;
+}
+
+.botao-conta:hover {
+    transform: scale(1.03);
+}
+
+.botao-conta.secundario {
+    background-color: transparent;
+    color: var(--texto);
+    border: 2px solid var(--texto);
+    padding: 12px 30px;
+}
+
+body.modo-escuro .botao-conta {
+    background-color: #f4f4f4;
+    color: #111;
+}
+
+body.modo-escuro .botao-conta.secundario {
+    background-color: transparent;
+    color: var(--texto);
+}
+
+
+/* ---------- página de login ---------- */
+
+.conta {
+    width: 90%;
+    max-width: 440px;
+    margin: 70px auto 90px;
+}
+
+.conta h1 {
+    font-weight: normal;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.conta-motivo {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.conta-abas {
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+    margin: 28px 0 30px;
+    border: 2px solid rgba(120, 120, 120, 0.35);
+    border-radius: 40px;
+}
+
+.conta-aba {
+    flex: 1;
+    padding: 11px;
+    border: none;
+    border-radius: 40px;
+    background: transparent;
+    color: var(--texto);
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.conta-aba.ativa {
+    background-color: var(--texto);
+    color: var(--fundo);
+}
+
+.conta-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.conta-campo label {
+    display: block;
+    font-size: 15px;
+    margin: 0 0 7px 18px;
+}
+
+.conta-campo input {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 30px;
+    border: 2px solid rgba(120, 120, 120, 0.35);
+    background: transparent;
+    color: var(--texto);
+    font-family: inherit;
+    font-size: 16px;
+    transition: border-color 0.25s ease;
+}
+
+.conta-campo input:focus {
+    outline: none;
+    border-color: #a52b22;
+}
+
+.conta-form .botao-conta {
+    margin-top: 8px;
+    width: 100%;
+}
+
+.conta-erro {
+    margin-top: 20px;
+    text-align: center;
+    color: #a52b22;
+    font-size: 15px;
+}
+
+body.modo-escuro .conta-erro {
+    color: #ff6b5e;
+}
+
+.conta-nota {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #777;
+}
+
+body.modo-escuro .conta-nota {
+    color: #aaa;
+}
+
+
+/* ---------- página de favoritos ---------- */
+
+.favoritos {
+    width: 92%;
+    max-width: 920px;
+    margin: 60px auto 90px;
+}
+
+.favoritos-topo {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+}
+
+.favoritos-topo h1 {
+    font-weight: normal;
+    font-size: 36px;
+}
+
+.favoritos-topo p {
+    font-size: 17px;
+    margin-top: 6px;
+}
+
+.lista-favoritos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.favorito {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgba(120, 120, 120, 0.35);
+    border-radius: 40px;
+    padding: 22px 20px 18px;
+    text-align: center;
+    transition: border-color 0.25s ease;
+}
+
+.favorito:hover {
+    border-color: #a52b22;
+}
+
+.favorito-link {
+    color: var(--texto);
+    text-decoration: none;
+    flex: 1;
+}
+
+.favorito-link img {
+    width: 100%;
+    height: 130px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 14px;
+}
+
+.favorito-link h2 {
+    font-weight: normal;
+    font-size: 22px;
+}
+
+.favorito-link p {
+    font-size: 14px;
+    font-style: italic;
+    color: #777;
+    margin-top: 4px;
+}
+
+body.modo-escuro .favorito-link p {
+    color: #aaa;
+}
+
+.favorito-remover {
+    margin-top: 16px;
+    border: none;
+    background: transparent;
+    color: #a52b22;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+body.modo-escuro .favorito-remover {
+    color: #ff6b5e;
+}
+
+.favoritos-vazio {
+    text-align: center;
+    padding: 50px 20px;
+    border: 2px dashed rgba(120, 120, 120, 0.35);
+    border-radius: 40px;
+}
+
+.favoritos-vazio p {
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+
+/* ---------- botão flutuante de favoritar ---------- */
+
+.botao-favoritar {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: 2px solid #a52b22;
+    border-radius: 40px;
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.25s ease;
+}
+
+.botao-favoritar:hover {
+    transform: scale(1.04);
+}
+
+.botao-favoritar .coracao {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.botao-favoritar.favoritado {
+    background-color: #a52b22;
+    color: #fff;
+}
+
+.botao-favoritar.pulsar .coracao {
+    animation: coracao-pulsar 0.4s ease;
+}
+
+@keyframes coracao-pulsar {
+    50% { transform: scale(1.4); }
+}
+
+@media (max-width: 700px) {
+
+    .botao-favoritar {
+        right: 16px;
+        bottom: 16px;
+        padding: 10px 20px;
+    }
+
+    .conta h1,
+    .favoritos-topo h1 {
+        font-size: 28px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .botao-favoritar.pulsar .coracao {
+        animation: none;
+    }
+} 

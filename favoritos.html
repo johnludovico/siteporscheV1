@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus favoritos | Porsche Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carros.css">
+    <link rel="stylesheet" href="conta.css">
+
+    <script defer src="main.js"></script>
+    <script defer src="conta.js"></script>
+    <script defer src="favoritos.js"></script>
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="lado-esquerdo">
+            <a href="index.html" class="item-menu">
+                ☰ menu
+            </a>
+
+            <a href="index.html" class="item-modelos">
+                <img src="https://companieslogo.com/img/orig/P911.DE-94013588.png?t=1744633652" 
+                alt="porsche"  
+                width="20" height="25">
+            </a>
+
+        </div>
+
+
+        <div class="logo-porsche-texto">
+            <img class="logotipo logotipo-preta" src="img/logotipo-preto.png" alt="Porsche Explorer">
+            <img class="logotipo logotipo-branca" src="img/logotipo-branco.png" alt="Porsche Explorer">
+        </div>
+
+
+        <button
+            class="botao-logo"
+            onclick="alternarTema()">
+
+            <img
+                src="https://images.pixels.com/images/artworkimages/medium/3/high-res-porsche-emblem-isolated-bw-stefano-senise-transparent.png"
+                alt="Porsche">
+
+        </button>
+
+        <img class="perfil perfil-clara" src="img/perfil.png" alt="Perfil do usuário">
+        <img class="perfil perfil-escura" src="img/perfil-branco.png" alt="Perfil do usuário">
+
+    </header>
+
+
+    <main class="favoritos">
+
+        <div class="favoritos-topo">
+            <div>
+                <h1>Meus favoritos</h1>
+                <p id="favoritos-saudacao"></p>
+            </div>
+
+            <button class="botao-conta secundario" id="botao-sair" type="button">Sair da conta</button>
+        </div>
+
+        <div class="lista-favoritos" id="lista-favoritos"></div>
+
+        <div class="favoritos-vazio" id="favoritos-vazio" hidden>
+            <p>
+                Você ainda não favoritou nenhum modelo.<br>
+                Abra a página de um carro e toque em "Favoritar".
+            </p>
+            <a class="botao-conta" href="index.html#modelos">Ver os modelos</a>
+        </div>
+
+    </main>
+
+
+    <footer class="rodape-site">
+
+        <div class="rodape-conteudo">
+
+            <div class="rodape-marca">
+                <img src="img/logotipo-branco.png" alt="Porsche Explorer">
+                <p>
+                    Um site de fã para conhecer os modelos da Porsche:
+                    números, história e curiosidades.
+                </p>
+            </div>
+
+            <nav class="rodape-coluna" aria-label="Navegação do rodapé">
+                <h2>Navegar</h2>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="911.html">Porsche 911</a></li>
+                </ul>
+            </nav>
+
+            <div class="rodape-coluna">
+                <h2>Aviso</h2>
+                <p>
+                    Projeto de fã, sem vínculo com a Porsche AG.
+                    Porsche e o brasão são marcas registradas de
+                    seus respectivos donos.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="rodape-base">
+            <p>© 2026 Porsche Explorer</p>
+            <a href="#">Voltar ao topo</a>
+        </div>
+
+    </footer>
+
+</body>
+</html>

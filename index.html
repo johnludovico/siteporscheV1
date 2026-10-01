@@ -8,12 +8,14 @@
     <title>Porsche Explorer</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="conta.css">
     <link rel="stylesheet" href="carros.css">
 
     <script defer src="main.js"></script>
+    <script defer src="conta.js"></script>
 </head>
 
-<body>
+<body class="pagina-inicial">
 
     <header class="cabecalho">
         <div class="lado-esquerdo">
@@ -21,7 +23,7 @@
                 ☰ menu
             </a>
 
-            <a href="modelos.html" class="item-modelos">
+            <a href="index.html" class="item-modelos">
                 <img src="https://companieslogo.com/img/orig/P911.DE-94013588.png?t=1744633652" 
                 alt= "porsche"  
                 width="20" height="25">
@@ -58,10 +60,27 @@
             <source src="video/porsche-banner.mp4" type="video/mp4">
             Seu navegador não suporta vídeo em HTML5.
         </video>
+
+        <a href="index.html" class="banner-menu">☰ menu</a>
+
+        <img class="perfil banner-perfil" src="img/perfil-branco.png" alt="Perfil do usuário">
+
+        <div class="banner-conteudo">
+            <h1 class="banner-titulo">
+                <img src="img/logotipo-branco.png" alt="Porsche Explorer">
+            </h1>
+
+            <p class="banner-texto">
+                Um site de fã criado para conhecer os modelos da Porsche de perto:
+                números, história e curiosidades de cada um.
+            </p>
+
+            <a href="#modelos" class="banner-botao">Explorar os modelos</a>
+        </div>
     </section>
 
 
-    <section class="mais-desejados">
+    <section class="mais-desejados" id="modelos">
 
         <p class="texto-desejados">
             Conheça os modelos mais desejados da Porsche, com design inovador e desempenho incomparável. Explore a excelência em engenharia automotiva e descubra o carro dos seus sonhos.
