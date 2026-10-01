@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Porsche</title>
+    <title>Porsche Explorer</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="conta.css">
+    <link rel="stylesheet" href="carros.css">
 
     <script defer src="main.js"></script>
+    <script defer src="conta.js"></script>
 </head>
 
-<body>
+<body class="pagina-inicial">
 
     <header class="cabecalho">
         <div class="lado-esquerdo">
@@ -20,7 +23,7 @@
                 ☰ menu
             </a>
 
-            <a href="modelos.html" class="item-modelos">
+            <a href="index.html" class="item-modelos">
                 <img src="https://companieslogo.com/img/orig/P911.DE-94013588.png?t=1744633652" 
                 alt= "porsche"  
                 width="20" height="25">
@@ -57,13 +60,30 @@
             <source src="video/porsche-banner.mp4" type="video/mp4">
             Seu navegador não suporta vídeo em HTML5.
         </video>
+
+        <a href="index.html" class="banner-menu">☰ menu</a>
+
+        <img class="perfil banner-perfil" src="img/perfil-branco.png" alt="Perfil do usuário">
+
+        <div class="banner-conteudo">
+            <h1 class="banner-titulo">
+                <img src="img/logotipo-branco.png" alt="Porsche Explorer">
+            </h1>
+
+            <p class="banner-texto">
+                Um site de fã criado para conhecer os modelos da Porsche de perto:
+                números, história e curiosidades de cada um.
+            </p>
+
+            <a href="#modelos" class="banner-botao">Explorar os modelos</a>
+        </div>
     </section>
 
 
-    <section class="mais-desejados">
+    <section class="mais-desejados" id="modelos">
 
         <p class="texto-desejados">
-            Abaixo tem a aba dos modelos mais desejados da Porsche no momento
+            Conheça os modelos mais desejados da Porsche, com design inovador e desempenho incomparável. Explore a excelência em engenharia automotiva e descubra o carro dos seus sonhos.
         </p>
 
 
@@ -72,7 +92,7 @@
             <a href="911.html" class="modelo-top">
 
                 <img
-                    src="https://stimg.cardekho.com/images/carexteriorimages/930x620/Porsche/911/11757/1762933836560/front-left-side-47.jpg"
+                    src="carros/porsche-icon.jpg"
                     alt="Porsche 911">
 
                 <p>Porsche 911</p>
@@ -83,11 +103,11 @@
             <a href="Cayman.html" class="modelo-top">
 
                 <img
-                    src="https://s2-autoesporte.glbimg.com/2-1ZT9-N1DEywxmo9ciaRzOshKI=/0x0:620x400/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_cf9d035bf26b4646b105bd958f32089d/internal_photos/bs/2020/6/V/uuImfYSPSdfVh9rFY7dQ/2015-02-04-p05.jpg"
+                    src="carros/cayman-icon.webp"
                     alt="Porsche Cayman">
 
                 <p>
-                    porsche cayman
+                    Porsche 718 Cayman
                 </p>
 
             </a>
@@ -96,11 +116,11 @@
             <a href="boxster.html" class="modelo-top">
 
                 <img
-                    src="https://cdn.motor1.com/images/mgl/P419W/s3/2021-porsche-boxster-25-front.jpg"
+                    src="carros/boxster-icon.webp"
                     alt="Porsche Boxster">
 
                 <p>
-                    porsche boxster
+                    Porsche 718 Boxster
                 </p>
 
             </a>
@@ -134,7 +154,7 @@
 
                     <div class="descricao-carro">
 
-                        <span>Gasolina</span>
+                        <span>Elétrico</span>
 
                         <p>
                             Carro elétrico e desportivo com capacidade
@@ -183,7 +203,7 @@
                     <div class="descricao-carro">
 
                         <span>Gasolina</span>
-                        <span>elétrico</span>
+                        <span>Elétrico</span>
 
                         <p>
                             SUV compacto desportivo com capacidade
@@ -209,8 +229,7 @@
 
                     <div class="descricao-carro">
 
-                        <span>elétrico</span>
-                        <span>híbrido</span>
+                        <span>Híbrido</span>
 
                         <p>
                             Um modelo focado em velocidade e potência
@@ -238,8 +257,8 @@
                     <div class="descricao-carro">
 
                         <span>Gasolina</span>
-                        <span>elétrico</span>
-                        <span>híbrido</span>
+                        <span>Elétrico</span>
+                        <span>Híbrido</span>
 
                         <p>
                             SUV versátil de até 5 lugares
@@ -281,13 +300,51 @@
 
     </section>
 
+    <section class="comparar">
+        <a href="comparar.html" class="link-comparar">
+        Quer ver os modelos lado a lado?
+        <span>Compare velocidade, potência e mais</span>
+        </a>
+    </section>
 
-    <a href="escolha.html" class="link-questionario">
-        Ainda não sabe qual Porsche combina com você?
-        <span>Faça o nosso questionário rápido e descubra seu modelo ideal</span>
-    </a>
 
+    <footer class="rodape-site">
+
+        <div class="rodape-conteudo">
+
+            <div class="rodape-marca">
+                <img src="img/logotipo-branco.png" alt="Porsche Explorer">
+                <p>
+                    Um site de fã para conhecer os modelos da Porsche:
+                    números, história e curiosidades.
+                </p>
+            </div>
+
+            <nav class="rodape-coluna" aria-label="Navegação do rodapé">
+                <h2>Navegar</h2>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="911.html">Porsche 911</a></li>
+                </ul>
+            </nav>
+
+            <div class="rodape-coluna">
+                <h2>Aviso</h2>
+                <p>
+                    Projeto de fã, sem vínculo com a Porsche AG.
+                    Porsche e o brasão são marcas registradas de
+                    seus respectivos donos.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="rodape-base">
+            <p>© 2026 Porsche Explorer</p>
+            <a href="#">Voltar ao topo</a>
+        </div>
+
+    </footer>
 
 </body>
-
 </html>

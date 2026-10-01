@@ -1,49 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>porsche cayenne</title>
+    <title>Porsche Cayenne</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="conta.css">
     <link rel="stylesheet" href="carros.css">
+
+    <script defer src="main.js"></script>
+    <script defer src="conta.js"></script>
     <script defer src="carros.js"></script>
 </head>
 <body>
 
+    <header class="cabecalho">
+        <div class="lado-esquerdo">
+            <a href="index.html" class="item-menu">
+                ☰ menu
+            </a>
+
+            <a href="index.html" class="item-modelos">
+                <img src="https://companieslogo.com/img/orig/P911.DE-94013588.png?t=1744633652" 
+                alt="porsche"  
+                width="20" height="25">
+            </a>
+
+        </div>
+
+
+        <div class="logo-porsche-texto">
+            <img class="logotipo logotipo-preta" src="img/logotipo-preto.png" alt="Porsche Explorer">
+            <img class="logotipo logotipo-branca" src="img/logotipo-branco.png" alt="Porsche Explorer">
+        </div>
+
+
+        <button
+            class="botao-logo"
+            onclick="alternarTema()">
+
+            <img
+                src="https://images.pixels.com/images/artworkimages/medium/3/high-res-porsche-emblem-isolated-bw-stefano-senise-transparent.png"
+                alt="Porsche">
+
+        </button>
+
+        <img class="perfil perfil-clara" src="img/perfil.png" alt="Perfil do usuário">
+        <img class="perfil perfil-escura" src="img/perfil-branco.png" alt="Perfil do usuário">
+
+    </header>
+
+
     <main class="pagina">
         <section class="hero">
-            <img 
-                src="https://images.porsche.com/f/285489813253582/5000x1744/f5ebb561bc/model-9yben1-2026-side-shot_6a5afb6df3454539acc8a348d8d5d4f0.png?w=2560&h=893&q=45&crop=faces%2Centropy%2Cedges&auto=format"
+
+            <video class="video-modelo" autoplay muted loop playsinline>
+                <source src="video/cayenne-banner.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo em HTML5.
+            </video>
+
+            <p class="versao-modelo">Cayenne Turbo Eletric</p>
+
+            <div class="lateral-container" id="cayenne-lateral">
+                <img 
+                src="carros/cayenne-lateral.avif"
                 alt="Porsche Cayenne lateral"
                 class="carro-lateral">
+            </div>
         </section>
 
 
         <section class="modelo">
-            <h1>Cayenne</h1>
+            
+            <h1> Cayenne </h1>
             <img 
-                src="https://d2ivfcfbdvj3sm.cloudfront.net/f8E30NGk1fK9b52o/51662/stills_0640_png/MY2022/51662/51662_st0640_118.webp?c=172&p=164&m=1&o=png&s=TnLcZQTa_pI1fzMHH9ktxP"
+                src="carros/cayenne-frontal.png"
                 alt="Porsche Cayenne frontal"
-                class="carro-frontal">
+                class="carro-frontal"
+                id="cayenne-frontal">
 
 
             <div class="especificacao aceleracao">
-                <strong>
-                    3,7<span>s</span>
+                <strong data-valor-final="2.5" data-decimais="1">
+                    <span class="valor-animado">0</span><span>s</span>
                 </strong>
                 <p>
                     Aceleração<br>
-                    de 0 a 100
+                    de 0 a 100km/h
                 </p>
             </div>
 
 
             <div class="especificacao desempenho">
-                <strong>
-                    295<span>Km/H</span>
+                <strong data-valor-final="260" data-decimais="0">
+                    <span class="valor-animado">0</span><span>Km/H</span>
                 </strong>
                 <p> velocidade máxima </p>
-                <strong class="potencia">
-                    739<span>CV</span>
+                <strong class="potencia" data-valor-final="1156" data-decimais="0">
+                    <span class="valor-animado">0</span><span>CV</span>
                 </strong>
             </div>
         </section>
@@ -51,28 +106,26 @@
 
         <section class="informacoes">
             <button class="ativo">2027</button>
-            <button>hibrido</button>
-            <button>tração integral</button>
-            <button>automatico</button>
+            <button>Elétrico</button>
+            <button>Tração Integral</button>
+            <button>Automático</button>
         </section>
 
         <section class="rodas">
 
             <article class="roda">
                 <img 
-                    src="https://http2.mlstatic.com/D_Q_NP_2X_631194-MLB92998761310_092025-P-4-rodas-porsche-cayenne-turbo-gt-aro-22-marca-gt7-5x130.webp"
+                    src="carros/2rodacayenne.png"
                     alt="Roda preta"
                 >
 
                 <div>
                     <h2>
-                        Ro<span>DA</span>
+                        Roda
                     </h2>
 
                     <p>
-                        Conjunto de rodas de liga<br>
-                        leve com design derivado<br>
-                        do motorsport
+                        Roda de liga leve preta de 10 raios
                     </p>
                 </div>
             </article>
@@ -80,23 +133,222 @@
 
             <article class="roda">
                 <img 
-                    src="https://images.tcdn.com.br/img/img_prod/674422/roda_avulsa_aro_20_original_porsche_cayenne_18093_1_d70e3d3ada85e28ad7ef9e42e5bce1ba.jpg"
+                    src="carros/1rodacayenne.png"
                     alt="Roda prata"
                 >
                 <div>
                     <h2>
-                        Ro<span>DA</span>
+                        Roda
                     </h2>
 
                     <p>
-                        Conjunto de rodas de liga<br>
-                        leve com design de cinco<br>
-                        raios de braço duplo
+                        Roda de liga leve de cinco raios duplos com acabamento escurecido
                     </p>
                 </div>
             </article>
         </section>
+
+
+        <section class="curiosidades">
+
+            <h2>Curiosidades sobre o Cayenne</h2>
+
+            <p class="curiosidades-dica">Toque nos cartões para descobrir</p>
+
+            <div class="grade-curiosidades">
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">01</span>
+                        <p>Quando surgiu o Cayenne?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                            A primeira geração chegou em 2002, tornando-se o terceiro modelo da Porsche na época, depois do 911 e do Boxster.
+                        </p>
+                    </div>
+                </button>
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">02</span>
+                        <p>Por que o Cayenne foi tão importante para a Porsche?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                            Ele ajudou a Porsche a expandir significativamente seu mercado, trazendo novos clientes para a marca e tornando-se uma das principais linhas de veículos da empresa.
+                        </p>
+                    </div>
+                </button>
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">03</span>
+                        <p>O Cayenne é realmente capaz de andar fora da estrada?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                            Sim. Desde a primeira geração, o Cayenne foi desenvolvido não apenas como SUV de estrada, 
+                            mas também com capacidades off-road, incluindo suspensão a ar e grande altura livre do solo em determinadas configurações.
+                        </p>
+                    </div>
+                </button>
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">04</span>
+                        <p>Qual marca participou do desenvolvimento do Cayenne?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                            A primeira geração do Cayenne foi desenvolvida em parceria com a Volkswagen e compartilha a mesma base estrutural do Volkswagen Touareg e do Audi Q7.
+                        </p>
+                    </div>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="evolucao">
+
+            <h2>Evolução do Cayenne</h2>
+
+            <div class="evolucao-anos">
+                <button class="ativo" data-ano="1964">2003</button>
+                <button data-ano="1997">2011</button>
+            </div>
+
+            <div class="evolucao-conteudo">
+
+                <div class="evolucao-carro" data-ano="1964">
+
+                    <img src="https://uk-plates-bucket-prod.ams3.digitaloceanspaces.com/car/Porsche/1703/w1.jpg" alt="Porsche 911 de 1964">
+
+                    <div class="apontamento esquerda" style="top: 22%; left: 6%;">
+                        <span class="ponto"></span>
+                        <p>Foi o primeiro SUV da Porsche.</p>
+                    </div>
+
+                    <div class="apontamento direita" style="top: 55%; right: 6%;">
+                        <span class="ponto"></span>
+                        <p>Possuía recursos como reduzida e bloqueio do diferencial central em determinadas configurações.</p>
+                    </div>
+
+                </div>
+
+                <div class="evolucao-carro" data-ano="1997" hidden>
+
+                    <img src="https://www.akioverland.com/cdn/shop/files/0d5f061ef6ce99bad609c66e8f61d7f6.webp?v=1757751139&width=1400" alt="Porsche 911 de 1997">
+
+                    <div class="apontamento esquerda" style="top: 22%; left: 6%;">
+                        <span class="ponto"></span>
+                        <p>O 958 marcou uma evolução importante na eletrificação da linha Cayenne.</p>
+                    </div>
+
+                    <div class="apontamento direita" style="top: 55%; right: 6%;">
+                        <span class="ponto"></span>
+                        <p>recebeu sistemas eletrônicos mais avançados e maior eficiência</p>
+                    </div>
+
+                </div>
+
+                <div class="evolucao-carro" data-ano="2026" hidden>
+
+                    <img src="carros/2026-branco.jpg" alt="Porsche 911 de 2026">
+
+                    <div class="apontamento esquerda" style="top: 22%; left: 6%;">
+                        <span class="ponto"></span>
+                        <p>Painel totalmente digital e assistentes eletrônicos de condução</p>
+                    </div>
+
+                    <div class="apontamento direita" style="top: 55%; right: 6%;">
+                        <span class="ponto"></span>
+                        <p>Aerodinâmica ativa, com elementos que se ajustam sozinhos conforme a velocidade</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        <section class="pistas">
+
+            <h2>O Cayenne nas pistas</h2>
+
+            <div class="grade-pistas">
+
+                <article class="carro-pista">
+
+                    <img src="https://exclusivecarregistry.com/images/cars/preview/thumb_114397.jpg" alt="Porsche 911 Carrera RSR">
+
+                    <span class="pista-numero">01</span>
+                    <h3>Cayenne Transsyberia Rally</h3>
+                    <span class="pista-periodo">2006 — 2008</span>
+
+                    <p>
+                      A Porsche utilizou Cayennes preparados para disputar o Rally Transsyberia, uma competição de longa distância que atravessava terrenos extremamente difíceis entre a Europa e a Ásia.
+                    </p>
+
+                </article>
+
+                <article class="carro-pista">
+
+                    <img src="https://i.redd.it/7zob5q6ouxa61.jpg" alt="Porsche 911 GT1">
+
+                    <span class="pista-numero">02</span>
+                    <h3>Cayenne S Transsyberia</h3>
+                    <span class="pista-periodo"> 2006 </span>
+
+                    <p>
+                       A Porsche criou uma versão especial baseada no Cayenne S para o rali. O carro recebeu preparação específica para competição, incluindo equipamentos de proteção, suspensão modificada e componentes voltados ao uso fora de estrada.
+                    </p>
+
+                </article>
+
+            </div>
+     </section>
+
     </main>
+
+
+        <footer class="rodape-site">
+
+        <div class="rodape-conteudo">
+
+            <div class="rodape-marca">
+                <img src="img/logotipo-branco.png" alt="Porsche Explorer">
+                <p>
+                    Um site de fã para conhecer os modelos da Porsche:
+                    números, história e curiosidades.
+                </p>
+            </div>
+
+            <nav class="rodape-coluna" aria-label="Navegação do rodapé">
+                <h2>Navegar</h2>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="911.html">Porsche 911</a></li>
+                </ul>
+            </nav>
+
+            <div class="rodape-coluna">
+                <h2>Aviso</h2>
+                <p>
+                    Projeto de fã, sem vínculo com a Porsche AG.
+                    Porsche e o brasão são marcas registradas de
+                    seus respectivos donos.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="rodape-base">
+            <p>© 2026 Porsche Explorer</p>
+            <a href="#">Voltar ao topo</a>
+        </div>
+
+    </footer>
 
 </body>
 </html>

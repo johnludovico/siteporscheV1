@@ -1,79 +1,132 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porsche Cayman</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="conta.css">
     <link rel="stylesheet" href="carros.css">
+
+    <script defer src="main.js"></script>
+    <script defer src="conta.js"></script>
     <script defer src="carros.js"></script>
 </head>
-
 <body>
+
+    <header class="cabecalho">
+        <div class="lado-esquerdo">
+            <a href="index.html" class="item-menu">
+                ☰ menu
+            </a>
+
+            <a href="index.html" class="item-modelos">
+                <img src="https://companieslogo.com/img/orig/P911.DE-94013588.png?t=1744633652" 
+                alt="porsche"  
+                width="20" height="25">
+            </a>
+
+        </div>
+
+
+        <div class="logo-porsche-texto">
+            <img class="logotipo logotipo-preta" src="img/logotipo-preto.png" alt="Porsche Explorer">
+            <img class="logotipo logotipo-branca" src="img/logotipo-branco.png" alt="Porsche Explorer">
+        </div>
+
+
+        <button
+            class="botao-logo"
+            onclick="alternarTema()">
+
+            <img
+                src="https://images.pixels.com/images/artworkimages/medium/3/high-res-porsche-emblem-isolated-bw-stefano-senise-transparent.png"
+                alt="Porsche">
+
+        </button>
+
+        <img class="perfil perfil-clara" src="img/perfil.png" alt="Perfil do usuário">
+        <img class="perfil perfil-escura" src="img/perfil-branco.png" alt="Perfil do usuário">
+
+    </header>
+
 
     <main class="pagina">
         <section class="hero">
-            <img 
-                src="https://a.storyblok.com/f/322327/2616x712/5a02fea4bc/cm24n3bix0001-718-cayman-side.png/m/1800x490/smart/filters:format(avif)"
-                alt="Porsche Cayman lateral"
-                class="carro-lateral">
+
+            <video class="video-modelo" autoplay muted loop playsinline>
+                <source src="video/cayman-banner.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo em HTML5.
+            </video>
+
+            <p class="versao-modelo">Porsche 718 Cayman GTS 4.0</p>
+
+            <div class="lateral-container" id="cayman-lateral">
+                <img
+                src=""
+                alt="Cayman lateral"
+                class="cayman-lateral">
+            </div>
         </section>
 
 
         <section class="modelo">
-            <h1>Cayman</h1>
+            
+            <h1> Cayman </h1>
             <img 
-                src="https://res.cloudinary.com/doykh3kbc/image/upload/v1746148567/porsche-cayman-718-gt4-rs_n4yrxn.webp"
-                alt="Porsche Cayman frontal"
-                class="carro-frontal">
+                src="carros/cayman-frontal.png"
+                alt="Cayman frontal"
+                class="carro-frontal"
+                id="cayman-frontal">
 
 
             <div class="especificacao aceleracao">
-                <strong>
-                    4,9<span>s</span>
+                <strong data-valor-final="4.0" data-decimais="1">
+                    <span class="valor-animado">0</span><span>s</span>
                 </strong>
                 <p>
                     Aceleração<br>
-                    de 0 a 100
+                    de 0 a 100km/h
                 </p>
             </div>
 
 
             <div class="especificacao desempenho">
-                <strong>
-                    275<span>Km/H</span>
+                <strong data-valor-final="288" data-decimais="0">
+                    <span class="valor-animado">0</span><span>Km/H</span>
                 </strong>
                 <p> velocidade máxima </p>
-                <strong class="potencia">
-                    300<span>CV</span>
+                <strong class="potencia" data-valor-final="400" data-decimais="0">
+                    <span class="valor-animado">0</span><span>CV</span>
                 </strong>
             </div>
         </section>
 
 
         <section class="informacoes">
-            <button class="ativo">2024</button>
-            <button>gasolina</button>
-            <button>tração traseira</button>
-            <button>automatico</button>
+            <button class="ativo">2025</button>
+            <button>Gasolina</button>
+            <button>Tração Traseira</button>
+            <button>Automático</button>
         </section>
 
         <section class="rodas">
 
             <article class="roda">
                 <img 
-                    src="https://leandrinistore.vteximg.com.br/arquivos/ids/412550-900-900/Jogo-Roda-GT7-Porsche-Boxster-Cayman-718-Aro-20-Preta-Diamantada.png?v=638182220139700000"
+                    src="carros/1rodacayman.png"
                     alt="Roda preta"
                 >
 
                 <div>
                     <h2>
-                        Ro<span>DA</span>
+                        Roda
                     </h2>
 
                     <p>
-                        Conjunto de rodas de liga<br>
-                        leve com design derivado<br>
-                        do motorsport
+                        Roda de liga leve com design<br>
+                        icônico de 5 raios largos, inspirada no clássico estilo Fuchs
                     </p>
                 </div>
             </article>
@@ -81,23 +134,222 @@
 
             <article class="roda">
                 <img 
-                    src="https://images.tcdn.com.br/img/img_prod/813520/jogo_de_rodas_originais_porsche_718_cayman_aro_20x8_e_10_prata_diamantada_5x130_et_57_e_45_seminovas_1419_1_73e79e66b133bf7617401acaa130c78e.jpg"
+                    src="carros/2rodacayman.png"
                     alt="Roda prata"
                 >
                 <div>
                     <h2>
-                        Ro<span>DA</span>
+                        Roda
                     </h2>
 
                     <p>
-                        Conjunto de rodas de liga<br>
-                        leve com design de cinco<br>
-                        raios de braço duplo
+                        Roda de liga leve
+                        com design esportivo
+                        multiraios
                     </p>
                 </div>
             </article>
         </section>
+
+
+        <section class="curiosidades">
+
+            <h2>Curiosidades sobre o Cayman</h2>
+
+            <p class="curiosidades-dica">Toque nos cartões para descobrir</p>
+
+            <div class="grade-curiosidades">
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">01</span>
+                        <p>Qual é a principal característica mecânica do Cayman?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                            O Cayman é conhecido pelo motor central, uma configuração que ajuda a distribuir o peso do carro de maneira equilibrada e contribui para sua agilidade nas curvas.
+                        </p>
+                    </div>
+                </button>
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">02</span>
+                        <p>E o porta-malas?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                            Por ter o motor posicionado exatamente no meio do carro, o 718 Cayman se beneficia de um excelente espaço de carga para um esportivo. 
+                            Ele possui dois porta-malas: um na frente (onde tradicionalmente ficaria o motor) e um na traseira, acima e atrás do motor.
+                        </p>
+                    </div>
+                </button>
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">03</span>
+                        <p>Por que o Cayman passou a se chamar 718 Cayman?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                            Em 2016, a Porsche adotou o nome 718 para Cayman e Boxster, homenageando o histórico Porsche 718 de competição, que conquistou diversas vitórias nas pistas.
+                        </p>
+                    </div>
+                </button>
+
+                <button class="cartao-curiosidade" type="button">
+                    <div class="face frente">
+                        <span class="numero-curiosidade">04</span>
+                        <p>Por que o Porsche Cayman tem esse nome?</p>
+                    </div>
+                    <div class="face verso">
+                        <p>
+                            O nome vem do caiman, um crocodiliano encontrado na América Central e do Sul. A Porsche escolheu o nome para transmitir a ideia de agilidade e força do animal.
+                        </p>
+                    </div>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="evolucao">
+
+            <h2>Evolução do Cayman</h2>
+
+            <div class="evolucao-anos">
+                <button class="ativo" data-ano="1964">2005</button>
+                <button data-ano="1997">2012</button>
+            </div>
+
+            <div class="evolucao-conteudo">
+
+                <div class="evolucao-carro" data-ano="1964">
+
+                    <img src="https://mediaassets.pca.org/pages/pca/images/content/P06_0767_a4(1).jpg" alt="Porsche 911 de 1964">
+
+                    <div class="apontamento esquerda" style="top: 22%; left: 6%;">
+                        <span class="ponto"></span>
+                        <p>o Cayman R era a versão mais focada em desempenho, com 330 cv e redução de peso.</p>
+                    </div>
+
+                    <div class="apontamento direita" style="top: 55%; right: 6%;">
+                        <span class="ponto"></span>
+                        <p>boxer de 6 cilindros, naturalmente aspirado.</p>
+                    </div>
+
+                </div>
+
+                <div class="evolucao-carro" data-ano="1997" hidden>
+
+                    <img src="https://cdn.elferspot.com/wp-content/uploads/2023/08/01/Porsche-Cayman-S-981-Kaufberatung-Buyers-Guide-01.jpg" alt="Porsche 911 de 1997">
+
+                    <div class="apontamento esquerda" style="top: 22%; left: 6%;">
+                        <span class="ponto"></span>
+                        <p>o GT4 utilizava um motor 3.8 de 385 cv, tornando-se uma das versões mais voltadas para pista da família Cayman.</p>
+                    </div>
+
+                    <div class="apontamento direita" style="top: 55%; right: 6%;">
+                        <span class="ponto"></span>
+                        <p>O 981 GT4 recebeu diversos componentes derivados do 911 GT3, incluindo elementos de suspensão e freios, além de aerodinâmica específica</p>
+                    </div>
+
+                </div>
+
+                <div class="evolucao-carro" data-ano="2026" hidden>
+
+                    <img src="carros/2026-branco.jpg" alt="Porsche 911 de 2026">
+
+                    <div class="apontamento esquerda" style="top: 22%; left: 6%;">
+                        <span class="ponto"></span>
+                        <p>Painel totalmente digital e assistentes eletrônicos de condução</p>
+                    </div>
+
+                    <div class="apontamento direita" style="top: 55%; right: 6%;">
+                        <span class="ponto"></span>
+                        <p>Aerodinâmica ativa, com elementos que se ajustam sozinhos conforme a velocidade</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+    <section class="pistas">
+
+            <h2>O Cayman nas pistas</h2>
+
+            <div class="grade-pistas">
+
+                <article class="carro-pista">
+
+                    <img src="https://res.cloudinary.com/dmwcbhehi/image/upload/f_auto/q_auto/v1725291874/718-cayman-gt4-clubsport-gallery-9_hmsfgj.jpg" alt="Porsche 911 Carrera RSR">
+
+                    <span class="pista-numero">01</span>
+                    <h3>Cayman GT4 Clubsport</h3>
+                    <span class="pista-periodo">2016</span>
+
+                    <p>
+                        A Porsche apresentou o Cayman GT4 Clubsport, uma versão exclusivamente de competição baseada no Cayman GT4. O carro recebeu preparação específica para circuitos e perdeu diversos equipamentos necessários para utilização nas ruas.                    </p>
+
+                </article>
+
+                <article class="carro-pista">
+
+                    <img src="https://s2-autoesporte.glbimg.com/yaYf1b6lRvuPVqUSfeYu9w123JA=/0x0:1600x1076/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_cf9d035bf26b4646b105bd958f32089d/internal_photos/bs/2022/y/c/sseKRQQgmxmRBsukBwNA/.17.jpg" alt="Porsche 911 GT1">
+
+                    <span class="pista-numero">02</span>
+                    <h3>Cayman GT4 RS</h3>
+                    <span class="pista-periodo"> 2021 </span>
+
+                    <p>
+                       O GT4 RS levou a filosofia de pista ainda mais longe. Seu motor 4.0 boxer de seis cilindros aspirado produz 500 cv, e o carro recebeu diversas soluções aerodinâmicas inspiradas no automobilismo.
+                    </p>
+
+                </article>
+
+        </section>
+
     </main>
+
+
+    <footer class="rodape-site">
+
+        <div class="rodape-conteudo">
+
+            <div class="rodape-marca">
+                <img src="img/logotipo-branco.png" alt="Porsche Explorer">
+                <p>
+                    Um site de fã para conhecer os modelos da Porsche:
+                    números, história e curiosidades.
+                </p>
+            </div>
+
+            <nav class="rodape-coluna" aria-label="Navegação do rodapé">
+                <h2>Navegar</h2>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="911.html">Porsche 911</a></li>
+                </ul>
+            </nav>
+
+            <div class="rodape-coluna">
+                <h2>Aviso</h2>
+                <p>
+                    Projeto de fã, sem vínculo com a Porsche AG.
+                    Porsche e o brasão são marcas registradas de
+                    seus respectivos donos.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="rodape-base">
+            <p>© 2026 Porsche Explorer</p>
+            <a href="#">Voltar ao topo</a>
+        </div>
+
+    </footer>
 
 </body>
 </html>
