@@ -90,8 +90,11 @@ body {
 }
 
 #cayman-lateral {
-    bottom: -280px;
-    left: 50%;
+    bottom: -270px;
+}
+
+.cayman-lateral {
+    width: 100%;
 }
 
 #boxster-lateral {
